@@ -13,23 +13,9 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
- "API": {
-  "gruppi": [
-   "picco+folla"
-  ],
-  "primo": "2026-10-09",
-  "ultimo": "2026-10-09"
- },
  "APLD": {
   "gruppi": [
    "folla"
-  ],
-  "primo": "2026-10-09",
-  "ultimo": "2026-10-09"
- },
- "ARR": {
-  "gruppi": [
-   "picco+folla"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
@@ -41,28 +27,7 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
- "ATR": {
-  "gruppi": [
-   "controllo"
-  ],
-  "primo": "2026-10-09",
-  "ultimo": "2026-10-09"
- },
  "AVGO": {
-  "gruppi": [
-   "folla"
-  ],
-  "primo": "2026-10-09",
-  "ultimo": "2026-10-09"
- },
- "CAN": {
-  "gruppi": [
-   "controllo"
-  ],
-  "primo": "2026-10-09",
-  "ultimo": "2026-10-09"
- },
- "DTE": {
   "gruppi": [
    "folla"
   ],
@@ -114,13 +79,6 @@
  "IP": {
   "gruppi": [
    "controllo"
-  ],
-  "primo": "2026-10-09",
-  "ultimo": "2026-10-09"
- },
- "IT": {
-  "gruppi": [
-   "folla"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
@@ -258,13 +216,6 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
- "USO": {
-  "gruppi": [
-   "picco+folla"
-  ],
-  "primo": "2026-10-09",
-  "ultimo": "2026-10-09"
- },
  "VST": {
   "gruppi": [
    "controllo"
@@ -275,13 +226,6 @@
  "VZ": {
   "gruppi": [
    "picco+folla"
-  ],
-  "primo": "2026-10-09",
-  "ultimo": "2026-10-09"
- },
- "WTI": {
-  "gruppi": [
-   "controllo"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"

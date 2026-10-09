@@ -24,6 +24,7 @@ import re
 import sys
 import time
 import traceback
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -73,8 +74,14 @@ def num(x):
         return None
 
 
-def salva(df, fonte, nome):
-    """dati/<fonte>/<anno>/<data>_<nome>.csv.gz. Un secondo giro nello stesso giorno sovrascrive il primo."""
+def salva(df, fonte, nome, decimali=None):
+    """dati/<fonte>/<anno>/<data>_<nome>.csv.gz. Un secondo giro nello stesso giorno sovrascrive il primo.
+    decimali: {colonna: cifre} per arrotondare i campi che non servono a piena precisione (pesano sul file)."""
+    if decimali:
+        df = df.copy()
+        for c, n in decimali.items():
+            if c in df:
+                df[c] = pd.to_numeric(df[c], errors='coerce').round(n)
     cartella = DATI / fonte / str(OGGI.year)
     cartella.mkdir(parents=True, exist_ok=True)
     percorso = cartella / f'{OGGI.isoformat()}_{nome}.csv.gz'
@@ -128,7 +135,12 @@ def apewisdom():
 # 2. Selezione dei titoli per la Cboe: regole fissate il 9/10/2026, prima di vedere i dati (README, sezione 3)
 # ---------------------------------------------------------------------------------------
 ESCLUSI = {'SPY', 'QQQ', 'IWM', 'DIA', 'VOO', 'VTI', 'TQQQ', 'SQQQ', 'SPX', 'XSP', 'VIX', 'UVXY', 'SOXL', 'SOXS',
-           'TLT', 'GLD', 'SLV', 'ARKK', 'SPXL', 'SPXS', 'TNA', 'TZA'}   # indici ed ETF: sono il mercato, non la folla
+           'TLT', 'GLD', 'SLV', 'ARKK', 'SPXL', 'SPXS', 'TNA', 'TZA', 'USO'}   # indici ed ETF: sono il mercato, non la folla
+# sigle che su Reddit sono quasi sempre parole o gergo, non il titolo (aggiunte il 9/10/2026, prima di qualsiasi analisi)
+AMBIGUI = {'IT', 'DTE', 'API', 'CAN', 'ATR', 'ARR', 'WTI', 'DD', 'CEO', 'AI', 'ON', 'ALL', 'ARE', 'NOW', 'OR', 'SO', 'BE',
+           'GO', 'YOLO', 'EPS', 'PE', 'ATH', 'IMO', 'ANY', 'KEY', 'BIG', 'HAS', 'TV', 'USA', 'IPO', 'ETF', 'GDP', 'CPI',
+           'FED', 'FOR', 'OP', 'EV', 'RSI', 'ATM', 'OTM', 'ITM', 'IV', 'PM', 'AM', 'UK', 'EU', 'CASH', 'LOVE', 'FUN',
+           'REAL', 'BEST', 'NEXT', 'OPEN', 'TECH', 'MAIN', 'HUGE', 'TRUE', 'PLAY', 'SAFE', 'RUN', 'LOW', 'NEW', 'ONE'}
 PICCO_MENZIONI = 20          # menzioni minime nelle 24 ore per parlare di picco
 PICCO_MULTIPLO = 3           # menzioni almeno triplicate rispetto a 24 ore prima
 FOLLA = 25                   # i 25 titoli più citati
@@ -140,7 +152,7 @@ MASSIMO_SEGUITI = 260        # tetto per tenere il giro sotto i 15 minuti
 def selezione(ape):
     a = ape[ape.filtro == 'all-stocks'].copy()
     a['ticker'] = a.ticker.astype(str).str.upper().str.strip()
-    a = a[a.ticker.str.fullmatch(r'[A-Z][A-Z.]{0,5}') & ~a.ticker.isin(ESCLUSI)]
+    a = a[a.ticker.str.fullmatch(r'[A-Z][A-Z.]{0,5}') & ~a.ticker.isin(ESCLUSI | AMBIGUI)]
     a['menzioni'] = pd.to_numeric(a.mentions, errors='coerce').fillna(0)
     a['menzioni_24h'] = pd.to_numeric(a.mentions_24h_ago, errors='coerce').fillna(0)
     a['posto'] = pd.to_numeric(a['rank'], errors='coerce')
@@ -304,7 +316,7 @@ def polymarket():
     if df.empty:
         NOTE.append(('Polymarket', False, 'nessuna classifica letta'))
         return
-    p = salva(df, 'polymarket', 'classifiche')
+    p = salva(df, 'polymarket', 'classifiche', {'volume': 0, 'pnl': 0})
     # le categorie sono davvero diverse dalla classifica generale? (il filtro risultava ignorato nei test del 9/10)
     gen = set(df[(df.categoria == 'OVERALL') & (df.periodo == 'MONTH') & (df.ordine == 'PNL')].wallet.head(200))
     uguali = sum(set(df[df.categoria == c].wallet) == gen for c in PM_CATEGORIE if (df.categoria == c).any())
@@ -319,21 +331,24 @@ def polymarket():
             pannello[w] = OGGI.isoformat()
     scrivi_json('polymarket_pannello.json', pannello)
     inizio, letti, vuoti, quote = time.time(), [], 0, []
-    for w in sorted(pannello, key=lambda x: pannello[x]):
+
+    def leggi(w):
         if time.time() - inizio > PM_TEMPO_PANNELLO:
-            break
+            return w, 'tempo'
         try:
-            j = scarica(f'{PM}?timePeriod=ALL&orderBy=PNL&user={w}', tentativi=2, attesa=30)
-            if isinstance(j, list) and j:
-                r = j[0]
+            j = scarica(f'{PM}?timePeriod=ALL&orderBy=PNL&user={w}', tentativi=3, attesa=30)
+            return w, (j[0] if isinstance(j, list) and j else None)
+        except Exception:
+            return w, None
+
+    with ThreadPoolExecutor(max_workers=4) as ex:      # 4 richieste alla volta: tutto il pannello in pochi minuti
+        for w, r in ex.map(leggi, list(pannello)):
+            if isinstance(r, dict):
                 letti.append(dict(wallet=w, dal=pannello[w], rank_all=r.get('rank'), volume_all=r.get('vol'), pnl_all=r.get('pnl')))
             else:
                 vuoti += 1
-        except Exception:
-            vuoti += 1
-        time.sleep(0.12)
     if letti:
-        p2 = salva(pd.DataFrame(letti), 'polymarket', 'pannello')
+        p2 = salva(pd.DataFrame(letti), 'polymarket', 'pannello', {'volume_all': 0, 'pnl_all': 2})
         quote = kb(p2)
     NOTE.append(('Polymarket', bool(letti), f'pannello: {len(letti)} wallet letti su {len(pannello)}, {vuoti} senza risposta'
                  + (f', {quote}' if quote else '')))
@@ -364,8 +379,10 @@ def hyperliquid():
         raise RuntimeError(f'classifica vuota (chiavi: {list(lb)[:5] if isinstance(lb, dict) else type(lb)})')
     for c in ('valore_conto', 'pnl_month', 'pnl_allTime', 'vlm_month'):
         df[c] = pd.to_numeric(df[c], errors='coerce').fillna(0)
-    rilevanti = df[(df.valore_conto >= 25_000) | (df.pnl_month.abs() >= 25_000) | (df.pnl_allTime.abs() >= 250_000)]
-    p = salva(rilevanti, 'hyperliquid', 'classifica')
+    rilevanti = df[(df.valore_conto >= 100_000) | (df.pnl_month.abs() >= 50_000) | (df.pnl_allTime.abs() >= 500_000)]
+    rilevanti = rilevanti.drop(columns=['roi_day', 'roi_week', 'vlm_day', 'vlm_week'])
+    soldi = {c: 0 for c in rilevanti.columns if c.startswith(('pnl_', 'vlm_')) or c == 'valore_conto'}
+    p = salva(rilevanti, 'hyperliquid', 'classifica', {**soldi, 'roi_month': 4, 'roi_allTime': 4})
     NOTE.append(('Hyperliquid', True, f'classifica: {len(df)} conti, salvati {len(rilevanti)} rilevanti, {kb(p)}'))
 
     # vault: tutti, chiusi compresi (serve contro il bias di sopravvivenza)
@@ -381,8 +398,12 @@ def hyperliquid():
                 rec[f'pnl_{periodo}'] = num(serie[-1]) if serie else None
             vt.append(rec)
         vdf = pd.DataFrame(vt)
-        p = salva(vdf, 'hyperliquid', 'vault')
-        NOTE.append(('Hyperliquid', True, f'vault: {len(vdf)} ({int(vdf.chiuso.fillna(False).astype(bool).sum())} chiusi), {kb(p)}'))
+        chiusi = vdf.chiuso.fillna(False).astype(bool)
+        # i vault chiusi non cambiano più: tutti il lunedì, negli altri giorni solo gli aperti con almeno 100 $
+        da_salvare = vdf if OGGI.weekday() == 0 else vdf[~chiusi & (vdf.tvl.fillna(0) >= 100)]
+        soldi = {c: 0 for c in vdf.columns if c.startswith('pnl_') or c == 'tvl'}
+        p = salva(da_salvare, 'hyperliquid', 'vault', {**soldi, 'apr': 4})
+        NOTE.append(('Hyperliquid', True, f'vault: {len(vdf)} ({int(chiusi.sum())} chiusi), salvati {len(da_salvare)}, {kb(p)}'))
     except Exception as e:
         vdf = pd.DataFrame()
         NOTE.append(('Hyperliquid', False, f'vault: {str(e)[:80]}'))

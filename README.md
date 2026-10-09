@@ -42,7 +42,7 @@ interventi manuali (`.github/workflows/archivio.yml`, codice in `raccolta.py`).
 | ApeWisdom | `menzioni` | Tutti i titoli citati su Reddit (filtri `all-stocks` e `wallstreetbets`): menzioni, upvote, posto, menzioni e posto di 24 ore prima |
 | Cboe (solo giorni feriali) | `sottostanti`, `scadenze` | Per i titoli scelti con le regole della sezione 3: prezzo, IV30, volumi e open interest totali; per ogni scadenza fino a 70 giorni: strike al denaro, IV al denaro, straddle e movimento implicito, spread al denaro, IV delle put e delle call a delta 25 |
 | Polymarket | `classifiche`, `pannello` | Classifiche per P&L (giorno, settimana, mese, sempre: prime 1.000), per volume (mese: prime 500), per categoria (mese: prime 200). Pannello: P&L complessivo di ogni wallet entrato nelle classifiche mensili o storiche, registrato ogni giorno anche quando perde |
-| Hyperliquid | `classifica`, `vault`, `posizioni`, `fill` | Classifica dei conti rilevanti (conto ≥ 25.000 $, oppure P&L del mese ≥ 25.000 $ in valore assoluto, oppure P&L storico ≥ 250.000 $), tutti i vault compresi i chiusi, posizioni aperte e fill delle ultime 26 ore di un pannello di circa 250 wallet |
+| Hyperliquid | `classifica`, `vault`, `posizioni`, `fill` | Classifica dei conti rilevanti (conto ≥ 100.000 $, oppure P&L del mese ≥ 50.000 $ in valore assoluto, oppure P&L storico ≥ 500.000 $); vault aperti con almeno 100 $ ogni giorno e tutti, chiusi compresi, il lunedì; posizioni aperte e fill delle ultime 26 ore di un pannello di circa 200-250 wallet |
 
 Stato tecnico in `stato/`: titoli seguiti (`seguiti.json`), pannello Polymarket (`polymarket_pannello.json`), titoli
 senza catena Cboe (`cboe_errori.txt`), data dell'ultimo giro riuscito.
@@ -54,7 +54,7 @@ l'analisi riparte da quella data.
 
 ### Selezione dei titoli per la Cboe (direzione 2)
 
-Universo: filtro ApeWisdom `all-stocks`, esclusi indici ed ETF (`ESCLUSI` in `raccolta.py`).
+Universo: filtro ApeWisdom `all-stocks`, esclusi indici ed ETF (`ESCLUSI` in `raccolta.py`) e le sigle che su Reddit sono quasi sempre parole o gergo, come IT, DTE, API e CAN (`AMBIGUI`, aggiunta il 9/10/2026 dopo il primo giro e prima di qualsiasi analisi).
 
 - **picco**: almeno 20 menzioni nelle 24 ore **e** almeno il triplo delle menzioni di 24 ore prima (se il dato
   precedente manca vale come zero);
@@ -127,7 +127,7 @@ un'operatività.
   profilo che si può seguire.
 - **Pannelli fissi**: Polymarket fino a 2.500 wallet, Hyperliquid circa 250. Un wallet entra nel pannello quando
   compare nelle classifiche, quindi c'è un bias verso chi ha vinto prima di entrare: va tenuto presente nell'analisi.
-- **Dimensioni**: si stimano pochi MB al giorno. STATO.md segnala quando l'archivio supera i 700 MB (GitHub consiglia di
+- **Dimensioni**: il primo giro (9/10/2026) pesava 3,5 MB; dopo gli arrotondamenti l'obiettivo è circa 2 MB al giorno. STATO.md segnala quando l'archivio supera i 700 MB (GitHub consiglia di
   restare sotto 1 GB).
 - **Repository pubblico**: niente segreti, niente dati personali. Wallet e nomi utente sono già pubblici sulle fonti.
 
