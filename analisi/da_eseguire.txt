@@ -1,1 +1,1 @@
-python analisi/polymarket_meteo_macro/test2_storico.py
+python analisi/polymarket_meteo_macro/libri.py --prova
