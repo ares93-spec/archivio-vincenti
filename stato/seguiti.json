@@ -6,6 +6,13 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "AGI": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "AMD": {
   "gruppi": [
    "folla"
@@ -34,6 +41,48 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "AXTI": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "BY": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "CLOV": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "CRM": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "DJT": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "ET": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "GME": {
   "gruppi": [
    "picco+folla"
@@ -51,6 +100,13 @@
  "GOOGL": {
   "gruppi": [
    "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "IBM": {
+  "gruppi": [
+   "controllo"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
@@ -83,7 +139,21 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "IQ": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "JD": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "JPM": {
   "gruppi": [
    "controllo"
   ],
@@ -132,7 +202,28 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "NFLX": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "NGL": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "NIO": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "NOK": {
   "gruppi": [
    "controllo"
   ],
@@ -148,7 +239,8 @@
  },
  "ORCL": {
   "gruppi": [
-   "picco"
+   "picco",
+   "picco+folla"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
@@ -175,6 +267,13 @@
   "ultimo": "2026-10-09"
  },
  "RKLB": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "SCHD": {
   "gruppi": [
    "controllo"
   ],
@@ -226,6 +325,27 @@
  "VZ": {
   "gruppi": [
    "picco+folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "WDC": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "XLE": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "YOU": {
+  "gruppi": [
+   "folla"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
