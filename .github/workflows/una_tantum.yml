@@ -1,0 +1,45 @@
+name: Analisi una tantum
+
+# Esegue lo script indicato in analisi/da_eseguire.txt e salva i risultati nel repository.
+# Parte a ogni modifica di quel file (o a mano). Non ha orari: non tocca la raccolta serale.
+on:
+  push:
+    branches: [main]
+    paths: ['analisi/da_eseguire.txt']
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: una-tantum
+  cancel-in-progress: false
+
+jobs:
+  analisi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests pandas numpy scipy
+      - name: Esegue
+        run: |
+          comando="$(head -1 analisi/da_eseguire.txt)"
+          echo "Eseguo: $comando"
+          eval "$comando" 2>&1 | tee analisi/ultimo_log.txt
+      - name: Salva nel repository
+        if: always()
+        run: |
+          git config user.name "analisi-bot"
+          git config user.email "analisi-bot@users.noreply.github.com"
+          git add -A analisi 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Analisi una tantum del $(date -u +%Y-%m-%d)"
+          for i in 1 2 3 4 5; do
+            git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0
+            sleep 7
+          done
+          exit 1
