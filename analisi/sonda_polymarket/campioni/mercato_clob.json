@@ -1,0 +1,55 @@
+{
+ "enable_order_book": true,
+ "active": true,
+ "closed": false,
+ "archived": false,
+ "accepting_orders": true,
+ "accepting_order_timestamp": "2025-11-12T22:45:50Z",
+ "minimum_order_size": 5,
+ "minimum_tick_size": 0.01,
+ "condition_id": "0xe67f4d31f0eba1b009b49d7a7739b2a5f53a2d7d979a0902b465a510492c33bb",
+ "question_id": "0x2d668e0aea6061d4a12f062ddd7d2091594de682ee256c0c75871493233c5500",
+ "question": "Will 2026 be the hottest year on record?",
+ "description": "This market will resolve according to the numerical rank of how hot 2026 is when compared against all other years for which the Global Land-Ocean Temperature Index has data.\n\nYears will be ranked in descending order, starting with the hottest as number 1, the second hottest as number 2, etc.\n\nIf 2026 ties with any other year, it will resolve according to the place the year it ties with occupies.\n\nThis market will resolve immediately once the specified data becomes available, regardless of whether the figure for the relevant years is later revised.\n\nThe primary resolution source for this market will be the figure found in the table titled \"Land-Ocean Temperature Index (C)\" under the column \"No_Smoothing\" in the row \"2026\" (https://data.giss.nasa.gov/gistemp/graphs/graph_data/Global_Mean_Estimates_based_on_Land_and_Ocean_Data/graph.txt). If NASA's \"Global Temperature Index\" is rendered permanently unavailable, other information from NASA may be used. If no information for 2026 is provided by NASA by March 1, 2027, 11:59 PM ET, this market will resolve based on a consensus of credible reporting.",
+ "market_slug": "will-2026-be-the-hottest-year-on-record",
+ "end_date_iso": "2027-03-02T00:00:00Z",
+ "game_start_time": null,
+ "seconds_delay": 0,
+ "fpmm": "",
+ "maker_base_fee": 1000,
+ "taker_base_fee": 1000,
+ "notifications_enabled": true,
+ "neg_risk": true,
+ "neg_risk_market_id": "0x2d668e0aea6061d4a12f062ddd7d2091594de682ee256c0c75871493233c5500",
+ "neg_risk_request_id": "0xde1ae829dade5ec420ae13f7f7cfc98b790d4c618db50de527626cac48626988",
+ "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/earth+on+fire.png",
+ "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/earth+on+fire.png",
+ "rewards": {
+  "rates": null,
+  "min_size": 0,
+  "max_spread": 0
+ },
+ "is_50_50_outcome": false,
+ "tokens": [
+  {
+   "token_id": "23556429317429021692175226714041757812438092709195093999386854296551945919152",
+   "outcome": "Yes",
+   "price": 0.605,
+   "winner": false
+  },
+  {
+   "token_id": "107531561888318513792277163301281336651898062064090922046801464380647002668604",
+   "outcome": "No",
+   "price": 0.395,
+   "winner": false
+  }
+ ],
+ "tags": [
+  "Weather",
+  "Culture",
+  "Global Temp",
+  "Climate & Science",
+  "Weather & Science"
+ ],
+ "version": "v1"
+}
