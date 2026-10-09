@@ -1,1 +1,2 @@
 python analisi/polymarket_meteo_macro/libri.py --prova
+# rilancio 1307
