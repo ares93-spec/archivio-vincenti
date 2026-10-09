@@ -1,3 +1,7 @@
-LINK: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
+OLB: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
+SOS: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
+GOAT: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
+JZ: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
 IG: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
+LINK: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
 TIL: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co

@@ -76,6 +76,13 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "EDIT": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "ET": {
   "gruppi": [
    "folla"
@@ -90,6 +97,13 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "GOAT": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "GOOG": {
   "gruppi": [
    "folla"
@@ -100,6 +114,13 @@
  "GOOGL": {
   "gruppi": [
    "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "HD": {
+  "gruppi": [
+   "controllo"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
@@ -160,9 +181,23 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "JZ": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "LINK": {
   "gruppi": [
    "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "LULU": {
+  "gruppi": [
+   "folla"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
@@ -237,6 +272,13 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "OLB": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "ORCL": {
   "gruppi": [
    "picco",
@@ -247,7 +289,8 @@
  },
  "PLTR": {
   "gruppi": [
-   "picco+folla"
+   "picco+folla",
+   "folla"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
@@ -280,9 +323,30 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "SGOV": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "SLS": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "SNDK": {
   "gruppi": [
    "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "SOS": {
+  "gruppi": [
+   "controllo"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
@@ -325,6 +389,13 @@
  "VZ": {
   "gruppi": [
    "picco+folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "WAY": {
+  "gruppi": [
+   "controllo"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
