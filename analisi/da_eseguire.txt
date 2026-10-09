@@ -1,1 +1,1 @@
-python analisi/sonda_polymarket/sonda2.py
+python analisi/polymarket_meteo_macro/test2_storico.py
