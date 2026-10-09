@@ -1,7 +1,21 @@
 {
+ "AAOI": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "AAPL": {
   "gruppi": [
    "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "ADBE": {
+  "gruppi": [
+   "controllo"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
@@ -14,6 +28,13 @@
   "ultimo": "2026-10-09"
  },
  "AMD": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "AMZN": {
   "gruppi": [
    "folla"
   ],
@@ -48,7 +69,21 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "BROS": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "BY": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "CHTR": {
   "gruppi": [
    "controllo"
   ],
@@ -92,7 +127,8 @@
  },
  "GME": {
   "gruppi": [
-   "picco+folla"
+   "picco+folla",
+   "folla"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
@@ -125,6 +161,20 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "HOOD": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "HUT": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "IBM": {
   "gruppi": [
    "controllo"
@@ -148,7 +198,8 @@
  },
  "INTC": {
   "gruppi": [
-   "controllo"
+   "controllo",
+   "folla"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
@@ -167,6 +218,13 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "IREN": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "JD": {
   "gruppi": [
    "controllo"
@@ -181,7 +239,21 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "JUST": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "JZ": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "KORU": {
   "gruppi": [
    "controllo"
   ],
@@ -211,7 +283,29 @@
  },
  "META": {
   "gruppi": [
-   "folla"
+   "folla",
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "MH": {
+  "gruppi": [
+   "picco+folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "MRNA": {
+  "gruppi": [
+   "picco+folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "MS": {
+  "gruppi": [
+   "controllo"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
@@ -295,6 +389,13 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "PR": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "QBTS": {
   "gruppi": [
    "controllo"
@@ -311,12 +412,20 @@
  },
  "RKLB": {
   "gruppi": [
-   "controllo"
+   "controllo",
+   "folla"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
  "SCHD": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "SF": {
   "gruppi": [
    "controllo"
   ],
@@ -331,6 +440,13 @@
   "ultimo": "2026-10-09"
  },
  "SLS": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "SMC": {
   "gruppi": [
    "controllo"
   ],
@@ -379,6 +495,13 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "UI": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
  "VST": {
   "gruppi": [
    "controllo"
@@ -403,6 +526,13 @@
  "WDC": {
   "gruppi": [
    "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "WEN": {
+  "gruppi": [
+   "controllo"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
