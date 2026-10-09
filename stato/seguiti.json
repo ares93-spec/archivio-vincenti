@@ -1,0 +1,289 @@
+{
+ "AAPL": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "AMD": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "API": {
+  "gruppi": [
+   "picco+folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "APLD": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "ARR": {
+  "gruppi": [
+   "picco+folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "ASTS": {
+  "gruppi": [
+   "picco+folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "ATR": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "AVGO": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "CAN": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "DTE": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "GME": {
+  "gruppi": [
+   "picco+folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "GOOG": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "GOOGL": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "IG": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "INFQ": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "INTC": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "IP": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "IT": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "JD": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "LINK": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "MCD": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "META": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "MSFT": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "MU": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "NBIS": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "NIO": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "NVDA": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "ORCL": {
+  "gruppi": [
+   "picco"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "PLTR": {
+  "gruppi": [
+   "picco+folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "QBTS": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "RDDT": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "RKLB": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "SNDK": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "SPCX": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "T": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "TIL": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "TSLA": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "USO": {
+  "gruppi": [
+   "picco+folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "VST": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "VZ": {
+  "gruppi": [
+   "picco+folla"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ },
+ "WTI": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-09",
+  "ultimo": "2026-10-09"
+ }
+}
