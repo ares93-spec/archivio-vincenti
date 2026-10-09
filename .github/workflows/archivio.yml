@@ -1,0 +1,52 @@
+name: Archivio quotidiano
+
+on:
+  schedule:
+    # GitHub ragiona in UTC. 21:40 UTC = 23:40 italiane con l'ora legale, 22:40 con la solare:
+    # in entrambi i casi dopo la chiusura di Wall Street (22:00 italiane), quindi la catena Cboe è quella di chiusura.
+    # Gira tutti i giorni: Polymarket, Hyperliquid e Reddit non chiudono nel fine settimana (la Cboe si salta da sola).
+    - cron: '40 21 * * *'
+    # Riserva due ore dopo: parte davvero solo se il giro di oggi non è riuscito (stato/ultimo_giro.txt).
+    - cron: '40 23 * * *'
+  workflow_dispatch: {}          # per lanciarlo a mano (anche dall'app GitHub)
+  push:                          # un giro di prova a ogni modifica del codice
+    branches: [main]
+    paths: ['raccolta.py', '.github/workflows/archivio.yml']
+
+permissions:
+  contents: write                # serve per salvare i dati nel repository
+
+concurrency:
+  group: archivio
+  cancel-in-progress: false
+
+jobs:
+  raccolta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests pandas
+      - name: Raccolta
+        run: |
+          if [ "${{ github.event.schedule }}" = "40 23 * * *" ]; then
+            python raccolta.py --riserva
+          else
+            python raccolta.py
+          fi
+      - name: Salva nel repository
+        if: always()
+        run: |
+          git config user.name "archivio-bot"
+          git config user.email "archivio-bot@users.noreply.github.com"
+          git add -A dati stato STATO.md 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Archivio del $(date -u +%Y-%m-%d)"
+          for i in 1 2 3; do
+            git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1
