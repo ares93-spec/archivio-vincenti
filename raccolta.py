@@ -275,8 +275,8 @@ def cboe(ape):
 # ---------------------------------------------------------------------------------------
 PM = 'https://data-api.polymarket.com/v1/leaderboard'
 PM_CATEGORIE = ('POLITICS', 'SPORTS', 'CRYPTO', 'WEATHER', 'ECONOMICS', 'FINANCE', 'TECH', 'CULTURE')
-PM_PANNELLO_MAX = 2500       # wallet seguiti ogni giorno, anche quando perdono
-PM_TEMPO_PANNELLO = 9 * 60   # secondi al massimo per il pannello
+PM_PANNELLO_MAX = 6000       # wallet seguiti ogni giorno, anche quando perdono (circa 6 mesi di nuovi ingressi)
+PM_TEMPO_PANNELLO = 14 * 60  # secondi al massimo per il pannello
 
 
 def pm_classifica(categoria, periodo, quanti, ordine='PNL'):

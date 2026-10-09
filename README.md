@@ -125,7 +125,7 @@ un'operatività.
   solo dati pubblici, non si opera.
 - **Hyperliquid**: i conti ad alta frequenza (2.000 fill o più in 26 ore) vengono contati ma non salvati: non sono il
   profilo che si può seguire.
-- **Pannelli fissi**: Polymarket fino a 2.500 wallet, Hyperliquid circa 250. Un wallet entra nel pannello quando
+- **Pannelli fissi**: Polymarket fino a 6.000 wallet (il primo giorno ne ha riempiti 2.500: con il vecchio tetto i nuovi vincenti dei mesi successivi sarebbero rimasti fuori), Hyperliquid circa 250. Un wallet entra nel pannello quando
   compare nelle classifiche, quindi c'è un bias verso chi ha vinto prima di entrare: va tenuto presente nell'analisi.
 - **Dimensioni**: il primo giro (9/10/2026) pesava 3,5 MB; dopo gli arrotondamenti l'obiettivo è circa 2 MB al giorno. STATO.md segnala quando l'archivio supera i 700 MB (GitHub consiglia di
   restare sotto 1 GB).
