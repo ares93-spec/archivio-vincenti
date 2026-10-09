@@ -1,1 +1,1 @@
-python analisi/sonda_polymarket/sonda.py
+python analisi/sonda_polymarket/sonda2.py
