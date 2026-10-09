@@ -108,6 +108,7 @@ un'operatività.
 | Data | Cosa |
 |---|---|
 | venerdì 23/10/2026 | Controllo tecnico: errori, dimensioni, tempi del giro |
+| lunedì 9/11/2026 | Polymarket meteo e macro: analisi del Test 1 (libri ordini) e verifica dell'ipotesi esplorativa (sezione 5) |
 | venerdì 4/12/2026 | Prima lettura della direzione 2 (circa 8 settimane), solo se ci sono almeno 100 eventi |
 | venerdì 8/1/2027 | Verdetto della direzione 2 (circa 12 settimane) |
 | lunedì 11/1/2027 | Prima prova di persistenza di Polymarket e Hyperliquid (3 mesi), solo se la direzione 2 ha dato un esito chiaro |
@@ -123,7 +124,7 @@ sono in [analisi/polymarket_meteo_macro/regole.md](analisi/polymarket_meteo_macr
 | **1. Libri ordini** di circa 900 mercati meteo e macro, ogni 10 minuti, più tutti gli scambi | in corso fino al 6/11/2026 (`.github/workflows/libri.yml`, dati in `dati_test/libri/`) |
 | **2. Modello meteo contro mercato** su 1.220 eventi risolti | **NON SUPERATO** il 9/10/2026: Brier 0,801 per il modello contro 0,674 per il mercato; il mercato vince in 36 città su 37 |
 | Calibrazione dei prezzi | meteo: esiti sotto i 5¢ cari di circa 0,2¢ (significativo ma piccolo); macro: nessuna distorsione |
-| Ipotesi esplorativa: esiti meteo a 5-30¢ cari | da verificare sugli eventi dal 10/10 al 6/11/2026, solo se approvata |
+| Ipotesi esplorativa: esiti meteo a 5-30¢ cari | approvata il 9/10/2026; verifica sugli eventi dal 10/10 al 6/11/2026, il 9/11/2026 |
 
 ## 6. Limiti noti
 

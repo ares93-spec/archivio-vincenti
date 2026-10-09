@@ -87,7 +87,7 @@ strettamente migliore del nostro.
 - **Test 3 come definito sopra non si esegue**: la sua condizione (modello o miscela migliore del mercato) non è
   soddisfatta.
 
-## Ipotesi esplorativa nata dal Test 2 (scritta il 9/10/2026, attiva solo se approvata)
+## Ipotesi esplorativa nata dal Test 2 (scritta il 9/10/2026, approvata lo stesso giorno: verifica il 9/11/2026)
 
 Guardando la calibrazione meteo divisa nelle due metà del periodo (analisi fatta dopo aver visto i dati, quindi solo
 esplorativa), gli esiti a 15-30¢ risultano cari di circa 1,8¢ in entrambe le metà (circa −1,8 errori standard
