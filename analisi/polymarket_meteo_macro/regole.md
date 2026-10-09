@@ -11,7 +11,7 @@ e simulazioni.
   Solo eventi che scadono entro 48 ore.
 - **Mercati macro**: eventi aperti delle serie su inflazione USA (mensile e annua, core), occupati (jobs added),
   disoccupazione, decisioni della Fed, PCE, PPI, richieste di sussidio e PIL USA.
-- **Frequenza**: ogni 5 minuti.
+- **Frequenza**: ogni 10 minuti. Le regole del 9/10 dicevano 5: il giro di prova pesava circa 17 MB al giorno, quindi la frequenza è stata dimezzata lo stesso giorno, prima di qualsiasi risultato. Gli scambi restano registrati tutti.
   - Dal libro di ogni esito SÌ si salvano i primi 3 livelli per lato, la profondità entro 2¢ ed entro lo spread dei
     premi.
   - Si salvano anche i nuovi scambi di quei mercati (Data API `/trades`), che servono a simulare quando un ordine
@@ -75,3 +75,31 @@ informazione (criterio principale superato o miscela migliore del mercato).
 
 Ipotesi prudente da usare: un ordine limite si considera eseguito solo quando uno scambio avviene a un prezzo
 strettamente migliore del nostro.
+
+## Esito del Test 2 (9/10/2026) e conseguenze
+
+- **Meteo, modello contro mercato: NON SUPERATO.** Su 1.220 eventi di verifica il Brier è 0,801 per il modello e 0,674
+  per il mercato (differenza +0,127, IC95% +0,111 / +0,143). Il modello batte il mercato in 1 città su 37 e la miscela
+  50/50 è anch'essa peggiore del mercato. La previsione gratuita del giorno prima non aggiunge informazione al prezzo.
+- **Calibrazione meteo**: la distorsione verso le scommesse improbabili è presente secondo il criterio fissato (fascia
+  0-5¢: 0,60% di frequenza reale contro 0,81¢ di prezzo medio, −3,5 errori standard) ma vale circa 0,2¢ per azione.
+- **Calibrazione macro**: nessuna distorsione significativa (tutte le fasce entro 2 errori standard; 820 esiti, 130 eventi).
+- **Test 3 come definito sopra non si esegue**: la sua condizione (modello o miscela migliore del mercato) non è
+  soddisfatta.
+
+## Ipotesi esplorativa nata dal Test 2 (scritta il 9/10/2026, attiva solo se approvata)
+
+Guardando la calibrazione meteo divisa nelle due metà del periodo (analisi fatta dopo aver visto i dati, quindi solo
+esplorativa), gli esiti a 15-30¢ risultano cari di circa 1,8¢ in entrambe le metà (circa −1,8 errori standard
+ciascuna). Gli esiti a 5-15¢ sono leggermente cari in entrambe le metà.
+
+**Ipotesi da confermare su dati nuovi**: nei mercati giornalieri di temperatura, alla mezzanotte locale che apre il
+giorno, gli esiti SÌ fra 5¢ e 30¢ valgono meno del prezzo.
+
+- **Verifica**: sugli eventi risolti dal 10/10/2026 al 6/11/2026, che non sono mai stati usati, con la stessa misura e
+  lo stesso momento di decisione.
+- **Superata se**: nella fascia 5-30¢ la frequenza reale è inferiore al prezzo medio di almeno 2 errori standard, **e**
+  il vantaggio medio resta positivo dopo aver venduto al prezzo lettera del libro registrato dal Test 1 (non al prezzo
+  medio).
+- **Se superata**, il passo dopo è la simulazione su carta di un market maker che espone lettere su quelle fasce, con le
+  regole del Test 3.

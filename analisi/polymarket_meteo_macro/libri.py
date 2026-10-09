@@ -1,4 +1,4 @@
-"""Test 1 (regole in regole.md): fotografia dei libri ordini dei mercati meteo e macro di Polymarket ogni 5 minuti.
+"""Test 1 (regole in regole.md): fotografia dei libri ordini dei mercati meteo e macro di Polymarket ogni 10 minuti.
 
 Gira per circa 5 ore e 40 minuti (un job di GitHub Actions dura al massimo 6 ore); il workflow lo rilancia ogni 6 ore.
 Si ferma da solo dopo il 6/11/2026. Salva in dati_test/libri/<anno>/:
@@ -23,7 +23,7 @@ C = 'https://clob.polymarket.com'
 D = 'https://data-api.polymarket.com'
 FINE_TEST = datetime(2026, 11, 6, 23, 59, tzinfo=timezone.utc)
 DURATA = 5 * 3600 + 40 * 60
-PASSO = 300
+PASSO = 600                  # 10 minuti (5 minuti pesavano circa 17 MB al giorno)
 CITTA = ('nyc', 'london', 'seoul', 'miami', 'chicago', 'dallas', 'atlanta', 'toronto', 'paris', 'tokyo',
          'buenos-aires', 'seattle')
 NOMI_CITTA = ('NYC', 'New York', 'London', 'Seoul', 'Miami', 'Chicago', 'Dallas', 'Atlanta', 'Toronto', 'Paris',
@@ -132,7 +132,7 @@ def riga_libro(b, meta, ora):
     bb = bid[0][0] if bid else None
     ba = ask[0][0] if ask else None
     mid = (bb + ba) / 2 if bb is not None and ba is not None else None
-    r = dict(ora=ora, token=b.get('asset_id'), hash=b.get('hash'), ts_libro=b.get('timestamp'), bid=bb, ask=ba,
+    r = dict(ora=ora, id=meta.get('id'), bid=bb, ask=ba,
              bid_size=bid[0][1] if bid else None, ask_size=ask[0][1] if ask else None)
     for i in range(1, 3):
         r[f'bid{i + 1}'] = f'{bid[i][0]}:{bid[i][1]}' if len(bid) > i else None
@@ -155,7 +155,7 @@ def main():
     cartella = USCITA / str(adesso.year)
     cartella.mkdir(parents=True, exist_ok=True)
     libri, scambi, mercati_tutti = [], [], []
-    ultimo_hash, visti_scambi = {}, set()
+    ultimo_hash, visti_scambi, numeri = {}, set(), {}
     mercati, aggiornato = None, 0
     giro = 0
     while time.time() - inizio < DURATA and datetime.now(timezone.utc) < FINE_TEST:
@@ -167,7 +167,7 @@ def main():
                 if not nuovi.empty:
                     mercati = nuovi
                     aggiornato = time.time()
-                    mercati_tutti.append(mercati.assign(ora=ora))
+                    mercati_tutti.append(mercati)
                     print(f'{ora} mercati: {len(mercati)} ({(mercati.tipo == "meteo").sum()} meteo, '
                           f'{(mercati.tipo == "macro").sum()} macro)', flush=True)
             except Exception as e:
@@ -175,6 +175,9 @@ def main():
         if mercati is None or mercati.empty:
             time.sleep(PASSO)
             continue
+        for t in mercati.token_si:
+            numeri.setdefault(t, len(numeri))           # numero breve e stabile per token, scritto nel file dei mercati
+        mercati['id'] = mercati.token_si.map(numeri)
         meta = mercati.set_index('token_si').to_dict('index')
         token = list(meta)
         cambiati = 0
@@ -208,9 +211,9 @@ def main():
                 nuovi_scambi += 1
             time.sleep(0.2)
         giro += 1
-        if giro % 12 == 1:
+        if giro % 6 == 1:
             print(f'{ora} giro {giro}: libri cambiati {cambiati}/{len(token)}, scambi nuovi {nuovi_scambi}', flush=True)
-        if giro % 12 == 0:
+        if giro % 6 == 0:
             salva(cartella, nome, libri, scambi, mercati_tutti)
         time.sleep(max(5, PASSO - (time.time() - t_giro)))
     salva(cartella, nome, libri, scambi, mercati_tutti)
@@ -224,7 +227,7 @@ def salva(cartella, nome, libri, scambi, mercati_tutti):
     if scambi:
         pd.DataFrame(scambi).to_csv(cartella / f'{nome}_scambi.csv.gz', index=False, compression='gzip')
     if mercati_tutti:
-        pd.concat(mercati_tutti).to_csv(cartella / f'{nome}_mercati.csv.gz', index=False, compression='gzip')
+        pd.concat(mercati_tutti).drop_duplicates(['token_si', 'premi_min', 'premi_spread', 'premi_giorno', 'volume']).to_csv(cartella / f'{nome}_mercati.csv.gz', index=False, compression='gzip')
 
 
 if __name__ == '__main__':

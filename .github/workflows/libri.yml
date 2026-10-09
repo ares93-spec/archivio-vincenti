@@ -1,0 +1,44 @@
+name: Test 1 - libri ordini Polymarket
+
+# Fotografa ogni 10 minuti i libri ordini dei mercati meteo e macro (analisi/polymarket_meteo_macro/regole.md).
+# Ogni giro dura circa 5 ore e 40 minuti; i 4 orari coprono la giornata. Lo script si ferma da solo dopo il 6/11/2026.
+on:
+  schedule:
+    - cron: '5 0,6,12,18 * * *'
+  workflow_dispatch: {}
+  push:                          # parte subito anche quando cambia il registratore
+    branches: [main]
+    paths: ['analisi/polymarket_meteo_macro/libri.py', '.github/workflows/libri.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: libri
+  cancel-in-progress: false
+
+jobs:
+  libri:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests pandas
+      - name: Fotografie
+        run: python analisi/polymarket_meteo_macro/libri.py
+      - name: Salva nel repository
+        if: always()
+        run: |
+          git config user.name "libri-bot"
+          git config user.email "libri-bot@users.noreply.github.com"
+          git add -A dati_test 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Libri ordini del $(date -u +%Y-%m-%d_%H%M)"
+          for i in 1 2 3 4 5; do
+            git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0
+            sleep 7
+          done
+          exit 1
