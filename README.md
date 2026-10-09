@@ -113,7 +113,19 @@ un'operatività.
 | lunedì 11/1/2027 | Prima prova di persistenza di Polymarket e Hyperliquid (3 mesi), solo se la direzione 2 ha dato un esito chiaro |
 | venerdì 9/4/2027 | Verdetto di persistenza delle direzioni 3 e 4 (6 mesi) |
 
-## 5. Limiti noti
+## 5. Polymarket, meteo e macro: market maker "informato" (dal 9/10/2026)
+
+L'idea: un bot che espone denaro e lettera intorno a un prezzo giusto calcolato da un modello. Regole, esiti e ipotesi
+sono in [analisi/polymarket_meteo_macro/regole.md](analisi/polymarket_meteo_macro/regole.md).
+
+| Test | Stato |
+|---|---|
+| **1. Libri ordini** di circa 900 mercati meteo e macro, ogni 10 minuti, più tutti gli scambi | in corso fino al 6/11/2026 (`.github/workflows/libri.yml`, dati in `dati_test/libri/`) |
+| **2. Modello meteo contro mercato** su 1.220 eventi risolti | **NON SUPERATO** il 9/10/2026: Brier 0,801 per il modello contro 0,674 per il mercato; il mercato vince in 36 città su 37 |
+| Calibrazione dei prezzi | meteo: esiti sotto i 5¢ cari di circa 0,2¢ (significativo ma piccolo); macro: nessuna distorsione |
+| Ipotesi esplorativa: esiti meteo a 5-30¢ cari | da verificare sugli eventi dal 10/10 al 6/11/2026, solo se approvata |
+
+## 6. Limiti noti
 
 - **Cboe**: dati ritardati di 15 minuti, letti dopo la chiusura. L'endpoint non è documentato ufficialmente e potrebbe
   cambiare.
@@ -131,7 +143,7 @@ un'operatività.
   restare sotto 1 GB).
 - **Repository pubblico**: niente segreti, niente dati personali. Wallet e nomi utente sono già pubblici sulle fonti.
 
-## 6. File
+## 7. File
 
 | File | Cosa |
 |---|---|
@@ -140,4 +152,6 @@ un'operatività.
 | `STATO.md` | Esito dell'ultimo giro, scritto in automatico |
 | `CLAUDE.md` | Istruzioni per le sessioni di Claude su questo repository |
 | `dati/` | Archivio |
+| `dati_test/` | Dati dei test a tempo (libri ordini Polymarket) |
+| `analisi/` | Sonde, test e resoconti; `.github/workflows/una_tantum.yml` esegue il comando scritto in `analisi/da_eseguire.txt` |
 | `stato/` | Liste di lavoro del raccoglitore |
