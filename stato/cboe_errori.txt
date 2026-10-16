@@ -1,5 +1,8 @@
 LOT: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
-GOAT: 429 troppe richieste (https://cdn.cboe.com/api/global/delaye
+RE: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
+XLAB: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
+EDIT: 429 troppe richieste (https://cdn.cboe.com/api/global/delaye
+GOAT: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
 IG: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
 JZ: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
 LINK: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
