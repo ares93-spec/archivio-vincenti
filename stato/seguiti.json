@@ -11,7 +11,7 @@
    "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-14"
+  "ultimo": "2026-10-19"
  },
  "AAPL": {
   "gruppi": [
@@ -19,7 +19,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "ADBE": {
   "gruppi": [
@@ -56,21 +56,22 @@
    "folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "AMZN": {
   "gruppi": [
    "folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "APLD": {
   "gruppi": [
-   "folla"
+   "folla",
+   "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-14"
+  "ultimo": "2026-10-19"
  },
  "ASML": {
   "gruppi": [
@@ -87,14 +88,14 @@
    "folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "AVGO": {
   "gruppi": [
    "folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "AXTI": {
   "gruppi": [
@@ -151,7 +152,7 @@
    "controllo"
   ],
   "primo": "2026-10-12",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "CC": {
   "gruppi": [
@@ -159,6 +160,13 @@
   ],
   "primo": "2026-10-14",
   "ultimo": "2026-10-14"
+ },
+ "CD": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-19",
+  "ultimo": "2026-10-19"
  },
  "CHTR": {
   "gruppi": [
@@ -209,7 +217,21 @@
    "folla"
   ],
   "primo": "2026-10-12",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
+ },
+ "CVNA": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-19",
+  "ultimo": "2026-10-19"
+ },
+ "DAY": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-19",
+  "ultimo": "2026-10-19"
  },
  "DELL": {
   "gruppi": [
@@ -266,7 +288,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "FTC": {
   "gruppi": [
@@ -311,14 +333,14 @@
    "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "GOOGL": {
   "gruppi": [
    "folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-15"
+  "ultimo": "2026-10-19"
  },
  "GRND": {
   "gruppi": [
@@ -355,7 +377,7 @@
    "folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-15"
+  "ultimo": "2026-10-19"
  },
  "HTZ": {
   "gruppi": [
@@ -370,6 +392,13 @@
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
+ },
+ "IBKR": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-19",
+  "ultimo": "2026-10-19"
  },
  "IBM": {
   "gruppi": [
@@ -421,7 +450,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "JD": {
   "gruppi": [
@@ -471,7 +500,7 @@
    "controllo"
   ],
   "primo": "2026-10-13",
-  "ultimo": "2026-10-13"
+  "ultimo": "2026-10-19"
  },
  "LOT": {
   "gruppi": [
@@ -516,7 +545,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "MH": {
   "gruppi": [
@@ -553,7 +582,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-15"
+  "ultimo": "2026-10-19"
  },
  "MSTR": {
   "gruppi": [
@@ -568,7 +597,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "NBIS": {
   "gruppi": [
@@ -576,14 +605,14 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "NFLX": {
   "gruppi": [
    "folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-09"
+  "ultimo": "2026-10-19"
  },
  "NGL": {
   "gruppi": [
@@ -601,10 +630,11 @@
  },
  "NKE": {
   "gruppi": [
-   "folla"
+   "folla",
+   "controllo"
   ],
   "primo": "2026-10-12",
-  "ultimo": "2026-10-12"
+  "ultimo": "2026-10-19"
  },
  "NOK": {
   "gruppi": [
@@ -625,7 +655,7 @@
    "folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "OC": {
   "gruppi": [
@@ -652,10 +682,11 @@
  "ORCL": {
   "gruppi": [
    "picco",
-   "picco+folla"
+   "picco+folla",
+   "folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-14"
+  "ultimo": "2026-10-19"
  },
  "OWL": {
   "gruppi": [
@@ -710,6 +741,13 @@
   "primo": "2026-10-16",
   "ultimo": "2026-10-16"
  },
+ "RIVN": {
+  "gruppi": [
+   "picco+folla"
+  ],
+  "primo": "2026-10-19",
+  "ultimo": "2026-10-19"
+ },
  "RKLB": {
   "gruppi": [
    "controllo",
@@ -717,14 +755,14 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "RTX": {
   "gruppi": [
    "controllo"
   ],
   "primo": "2026-10-14",
-  "ultimo": "2026-10-14"
+  "ultimo": "2026-10-19"
  },
  "SAP": {
   "gruppi": [
@@ -752,7 +790,7 @@
    "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-09"
+  "ultimo": "2026-10-19"
  },
  "SLS": {
   "gruppi": [
@@ -788,7 +826,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "SOFI": {
   "gruppi": [
@@ -832,7 +870,14 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
+ },
+ "STX": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-19",
+  "ultimo": "2026-10-19"
  },
  "T": {
   "gruppi": [
@@ -841,12 +886,19 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
  },
+ "TCRT": {
+  "gruppi": [
+   "folla"
+  ],
+  "primo": "2026-10-19",
+  "ultimo": "2026-10-19"
+ },
  "TIL": {
   "gruppi": [
    "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-09"
+  "ultimo": "2026-10-19"
  },
  "TSLA": {
   "gruppi": [
@@ -854,7 +906,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  },
  "TSM": {
   "gruppi": [
@@ -900,12 +952,26 @@
   "primo": "2026-10-15",
   "ultimo": "2026-10-15"
  },
+ "VC": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-19",
+  "ultimo": "2026-10-19"
+ },
  "VST": {
   "gruppi": [
    "controllo"
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-12"
+ },
+ "VSXY": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-19",
+  "ultimo": "2026-10-19"
  },
  "VXUS": {
   "gruppi": [
@@ -976,6 +1042,6 @@
    "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-19"
  }
 }
