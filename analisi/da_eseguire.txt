@@ -1,2 +1,3 @@
-python analisi/polymarket_meteo_macro/libri.py --prova
+python analisi/controllo_tecnico/verifica_libri.py
 # rilancio 1307
+# controllo tecnico 23/10
