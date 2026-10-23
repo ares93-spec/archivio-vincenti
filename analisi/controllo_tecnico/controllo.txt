@@ -1,0 +1,138 @@
+=== 1. Giorni registrati (dal 2026-10-09 al 2026-10-22) ===
+apewisdom    attesi 14, registrati 14, mancanti nessuno, fuori calendario nessuno
+cboe         attesi 10, registrati 10, mancanti nessuno, fuori calendario nessuno
+polymarket   attesi 14, registrati 14, mancanti nessuno, fuori calendario nessuno
+hyperliquid  attesi 14, registrati 14, mancanti nessuno, fuori calendario nessuno
+
+Righe per giorno (somma dei file della fonte):
+giorno           apewisdom         cboe   polymarket  hyperliquid
+2026-10-09 Fri         1704          663         8777        41053
+2026-10-10 Sat         1483            0         8884        28285
+2026-10-11 Sun         1218            0         8981        32560
+2026-10-12 Mon         1267          730         9089        42380
+2026-10-13 Tue         1375          799         9161        33977
+2026-10-14 Wed         1666          893         9248        35332
+2026-10-15 Thu         1643          968         9345        47700
+2026-10-16 Fri         1906         1027         9380        38207
+2026-10-17 Sat         1687            0         9575        32921
+2026-10-18 Sun         1538            0         9630        34892
+2026-10-19 Mon         1439          962         9695        53416
+2026-10-20 Tue         1501         1000         9743        40196
+2026-10-21 Wed         1657         1003         9746        42550
+2026-10-22 Thu         1797         1168         9793        43167
+
+=== 2. Commit "Archivio del ..." (attesi: uno al giorno) ===
+2026-10-09: bb052f8 (10:19 UTC del 2026-10-09), 429eb5b (10:30 UTC del 2026-10-09), 523a46c (12:43 UTC del 2026-10-09), bad653f (22:05 UTC del 2026-10-09)  <-- 4 commit
+2026-10-10: 5760937 (22:01 UTC del 2026-10-10)
+2026-10-11: 9702e9d (22:03 UTC del 2026-10-11)
+2026-10-12: 5888995 (22:05 UTC del 2026-10-12)
+2026-10-13: 774d8de (22:17 UTC del 2026-10-13)
+2026-10-14: 5592af2 (22:18 UTC del 2026-10-14)
+2026-10-15: 8b44683 (22:18 UTC del 2026-10-15)
+2026-10-16: ad026f3 (22:19 UTC del 2026-10-16)
+2026-10-17: 6da62c9 (22:08 UTC del 2026-10-17)
+2026-10-18: 0fb5021 (22:09 UTC del 2026-10-18)
+2026-10-19: 3290277 (22:20 UTC del 2026-10-19)
+2026-10-20: 9f5e87f (00:13 UTC del 2026-10-20), 3ffe966 (22:22 UTC del 2026-10-20)  <-- 2 commit
+2026-10-21: ea8293f (22:23 UTC del 2026-10-21)
+2026-10-22: 3a93558 (22:24 UTC del 2026-10-22)
+2026-10-23:   <-- nessuno
+
+=== 3. Peso per giorno (MB, file compressi in dati/) ===
+giorno           apewisdom         cboe   polymarket  hyperliquid       totale
+2026-10-09 Fri        0.031        0.035        0.372        1.524        1.961
+2026-10-10 Sat        0.027        0.000        0.375        1.277        1.679
+2026-10-11 Sun        0.022        0.000        0.378        1.382        1.783
+2026-10-12 Mon        0.023        0.039        0.383        1.955        2.400
+2026-10-13 Tue        0.025        0.043        0.386        1.385        1.838
+2026-10-14 Wed        0.030        0.047        0.389        1.428        1.894
+2026-10-15 Thu        0.030        0.051        0.393        1.763        2.236
+2026-10-16 Fri        0.035        0.054        0.393        1.502        1.984
+2026-10-17 Sat        0.031        0.000        0.401        1.376        1.808
+2026-10-18 Sun        0.028        0.000        0.402        1.406        1.836
+2026-10-19 Mon        0.026        0.052        0.405        2.229        2.711
+2026-10-20 Tue        0.027        0.053        0.406        1.562        2.049
+2026-10-21 Wed        0.030        0.054        0.406        1.623        2.113
+2026-10-22 Thu        0.033        0.061        0.408        1.595        2.097
+media al giorno di calendario, 14 giorni: apewisdom 0.028, cboe 0.035, polymarket 0.393, hyperliquid 1.572 -> totale 2.028 MB
+media al giorno di calendario, ultimi 7:  apewisdom 0.030, cboe 0.039, polymarket 0.403, hyperliquid 1.613 -> totale 2.085 MB
+
+dati/ oggi: 28.4 MB; dati_test/ oggi: 115.9 MB
+proiezione dati/ a 6 mesi dal 9/10 (2027-04-09): 381 MB (soglia 700 MB), con il ritmo degli ultimi 7 giorni
+proiezione dati/ a 12 mesi dal 9/10 (2027-10-09): 762 MB (soglia 700 MB), con il ritmo degli ultimi 7 giorni
+dati/ arriva a 700 MB dopo circa 322 giorni da oggi (2027-09-09)
+
+Test 1 libri ordini (dati_test/libri), peso per giorno (MB):
+  2026-10-09: 4.17
+  2026-10-10: 8.13
+  2026-10-11: 8.00
+  2026-10-12: 8.47
+  2026-10-13: 8.65
+  2026-10-14: 8.49
+  2026-10-15: 8.30
+  2026-10-16: 8.01
+  2026-10-17: 7.88
+  2026-10-18: 7.71
+  2026-10-19: 7.99
+  2026-10-20: 8.73
+  2026-10-21: 9.58
+  2026-10-22: 9.69
+  2026-10-23: 2.09
+  media sui giorni interi 10-22/10: 8.43 MB al giorno; fino al 6/11 altri 15 giorni -> dati_test/ a circa 242 MB a fine test
+
+=== 4. Tempi del giro e pannelli (STATO.md di ogni commit "Archivio del ...") ===
+commit   giro (ora italiana)  minuti  PM letti/pannello  Cboe seguiti/letti/senza  HL wallet/errori  fonti ❌
+bb052f8  09/10/2026 12:03     16.8          1769/2500                   41/38/3             199/0  0
+429eb5b  09/10/2026 12:21      8.8          2498/2500                   50/47/3             199/0  0
+523a46c  09/10/2026 14:32     11.4          2637/2639                   60/53/7             199/0  0
+bad653f  09/10/2026 23:54     10.5          2677/2679                   78/70/8             204/0  0
+5760937  10/10/2026 23:53      8.5          2784/2786                         -             202/0  0
+9702e9d  11/10/2026 23:54      9.3          2881/2883                         -             200/0  0
+5888995  12/10/2026 23:54     10.9          2989/2991                   92/84/8             198/0  0
+774d8de  14/10/2026 00:05     12.4          3061/3063                  104/96/8             200/0  0
+5592af2  15/10/2026 00:07     11.3          3152/3155                 115/107/8             198/0  0
+8b44683  16/10/2026 00:05     12.7          3245/3247                 124/115/9             199/0  0
+ad026f3  17/10/2026 00:06     13.3          3328/3330                134/122/12             199/0  0
+6da62c9  18/10/2026 00:00      8.2          3475/3477                         -             202/0  0
+0fb5021  19/10/2026 00:01      8.8          3530/3532                         -             205/0  0
+3290277  20/10/2026 00:07     13.2          3599/3602                143/130/13             201/0  0
+9f5e87f  20/10/2026 02:00     12.7          3609/3611                145/131/14             201/0  0
+3ffe966  21/10/2026 00:09     13.7          3658/3660                152/138/14             201/0  0
+ea8293f  22/10/2026 00:09     13.8          3729/3731                153/139/14             201/0  0
+3a93558  23/10/2026 00:09     14.7          3817/3819                166/151/15             199/0  0
+
+pannello Polymarket: da 2679 a 3819 wallet in 13 giorni = 87.7 al giorno; tetto 6.000 raggiunto fra circa 25 giorni (2026-11-15) a questo ritmo
+titoli Cboe seguiti: da 78 a 166 in 13 giorni = 6.8 al giorno; tetto 260 raggiunto fra circa 14 giorni (2026-11-04) se la crescita resta lineare (le prime uscite per i 35 giorni arrivano dal 13/11)
+
+=== 5. Titoli senza catena Cboe (stato/cboe_errori.txt) ===
+ultimo giro (22/10): 15 titoli senza catena: XXII, RE, TCRT, TP, DAY, TIL, LOT, XLAB, GOAT, IG, JZ, LINK, OLB, SOS, UI
+  15 x 403 Client Error: Forbidden for url: htt
+titoli senza catena più ricorrenti (numero di giri su 18 ): TIL 18, IG 18, LINK 18, OLB 16, SOS 16, GOAT 16, JZ 16, UI 15, LOT 9, RE 8, XLAB 8, DAY 5, TCRT 5, TP 4, EDIT 3, XXII 1
+
+=== 6. Test 1 Polymarket: fotografie dei libri ordini ===
+giorno      fotografie (attese 144)  scambi registrati
+2026-10-09                      65              34436
+2026-10-10                     139              71499
+2026-10-11                     136              69498
+2026-10-12                     136              75904
+2026-10-13                     136              77156
+2026-10-14                     135              75976
+2026-10-15                     137              74431
+2026-10-16                     136              73342
+2026-10-17                     136              70847
+2026-10-18                     136              68031
+2026-10-19                     136              72084
+2026-10-20                     136              78866
+2026-10-21                     136              90430
+2026-10-22                     136              92165
+2026-10-23                      24              21699
+fotografie totali: 1860, dal 2026-10-09 13:12 al 2026-10-23 04:23 UTC
+buchi oltre 15 minuti: 52; durata totale 26.0 ore
+  2026-10-13 23:51 -> 2026-10-14 00:31 (40 minuti)
+  2026-10-11 23:45 -> 2026-10-12 00:24 (39 minuti)
+  2026-10-12 23:46 -> 2026-10-13 00:25 (39 minuti)
+  2026-10-17 23:51 -> 2026-10-18 00:30 (39 minuti)
+  2026-10-10 23:45 -> 2026-10-11 00:22 (37 minuti)
+  2026-10-18 23:52 -> 2026-10-19 00:29 (37 minuti)
+  2026-10-19 05:59 -> 2026-10-19 06:36 (37 minuti)
+  2026-10-22 23:57 -> 2026-10-23 00:33 (36 minuti)

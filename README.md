@@ -107,7 +107,7 @@ un'operatività.
 
 | Data | Cosa |
 |---|---|
-| venerdì 23/10/2026 | Controllo tecnico: errori, dimensioni, tempi del giro |
+| venerdì 23/10/2026 | Controllo tecnico: errori, dimensioni, tempi del giro → [resoconto](analisi/resoconti/2026-10-23_controllo_tecnico.md) |
 | lunedì 9/11/2026 | Polymarket meteo e macro: analisi del Test 1 (libri ordini) e verifica dell'ipotesi esplorativa (sezione 5) |
 | venerdì 4/12/2026 | Prima lettura della direzione 2 (circa 8 settimane), solo se ci sono almeno 100 eventi |
 | venerdì 8/1/2027 | Verdetto della direzione 2 (circa 12 settimane) |
