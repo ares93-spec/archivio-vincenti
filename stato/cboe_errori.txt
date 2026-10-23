@@ -1,8 +1,9 @@
+DAY: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
+AIXI: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
 XXII: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
 RE: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
 TCRT: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
 TP: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
-DAY: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
 TIL: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
 LOT: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
 XLAB: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
