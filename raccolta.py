@@ -35,7 +35,10 @@ RADICE = Path(__file__).resolve().parent
 DATI = RADICE / 'dati'
 STATO = RADICE / 'stato'
 ADESSO = dt.datetime.now(dt.timezone.utc)
-OGGI = ADESSO.date()                                   # data UTC del giro (alle 21:40 UTC è ancora la seduta di New York)
+# Data del giro = data della seduta di New York (UTC-5 fisso, valido con l'ora legale e con la solare).
+# Il giro delle 21:40 UTC resta sullo stesso giorno; la riserva delle 23:40 UTC, che GitHub a volte avvia dopo
+# mezzanotte UTC (il 20/10/2026 alle 00:00), resta sul giorno della seduta invece di passare al giorno dopo.
+OGGI = (ADESSO - dt.timedelta(hours=5)).date()
 FERIALE = OGGI.weekday() < 5
 
 S = requests.Session()

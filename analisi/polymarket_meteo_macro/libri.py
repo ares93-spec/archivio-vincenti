@@ -71,7 +71,11 @@ def scegli_mercati(adesso):
     """Elenco dei mercati da fotografare: meteo delle 12 città entro 48 ore, macro entro 45 giorni."""
     scelti = []
     limite_meteo = adesso + timedelta(hours=48)
+    visti_meteo = set()
     for e in eventi('daily-temperature'):
+        if e.get('id') in visti_meteo:          # la paginazione può restituire due volte lo stesso evento
+            continue
+        visti_meteo.add(e.get('id'))
         serie = (e.get('seriesSlug') or '').lower()
         titolo = e.get('title') or ''
         if not (any(serie.startswith(c + '-') for c in CITTA) or any(f' in {n} ' in titolo for n in NOMI_CITTA)):
@@ -113,7 +117,9 @@ def scegli_mercati(adesso):
                           premi_min=m.get('rewardsMinSize'), premi_spread=m.get('rewardsMaxSpread'), premi_giorno=tasso,
                           commissioni=json.dumps(m.get('feeSchedule')), volume=m.get('volumeNum') or m.get('volume'),
                           liquidita=m.get('liquidityNum'), tick=m.get('orderPriceMinTickSize'), minimo=m.get('orderMinSize')))
-    return pd.DataFrame(righe)
+    df = pd.DataFrame(righe)
+    # un token ripetuto fa fallire to_dict('index') nel giro (guasto del 23/10/2026 alle 05:13 UTC)
+    return df.drop_duplicates('token_si').reset_index(drop=True) if not df.empty else df
 
 
 def livelli(lista, verso):
