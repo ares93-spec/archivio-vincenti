@@ -16,10 +16,11 @@
  "AAPL": {
   "gruppi": [
    "folla",
-   "picco+folla"
+   "picco+folla",
+   "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "ADBE": {
   "gruppi": [
@@ -35,7 +36,7 @@
    "folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-16"
+  "ultimo": "2026-10-28"
  },
  "AIXI": {
   "gruppi": [
@@ -64,14 +65,21 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "AMZN": {
   "gruppi": [
    "folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
+ },
+ "ANTX": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-28",
+  "ultimo": "2026-10-28"
  },
  "APLD": {
   "gruppi": [
@@ -94,10 +102,11 @@
  "ASTS": {
   "gruppi": [
    "picco+folla",
-   "folla"
+   "folla",
+   "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "AVGO": {
   "gruppi": [
@@ -197,7 +206,7 @@
    "controllo"
   ],
   "primo": "2026-10-19",
-  "ultimo": "2026-10-19"
+  "ultimo": "2026-10-28"
  },
  "CHTR": {
   "gruppi": [
@@ -233,7 +242,7 @@
    "controllo"
   ],
   "primo": "2026-10-22",
-  "ultimo": "2026-10-22"
+  "ultimo": "2026-10-28"
  },
  "COST": {
   "gruppi": [
@@ -391,7 +400,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "ETSY": {
   "gruppi": [
@@ -405,7 +414,7 @@
    "controllo"
   ],
   "primo": "2026-10-26",
-  "ultimo": "2026-10-26"
+  "ultimo": "2026-10-28"
  },
  "EWZ": {
   "gruppi": [
@@ -416,10 +425,11 @@
  },
  "FCF": {
   "gruppi": [
-   "controllo"
+   "controllo",
+   "folla"
   ],
   "primo": "2026-10-20",
-  "ultimo": "2026-10-26"
+  "ultimo": "2026-10-28"
  },
  "FIGR": {
   "gruppi": [
@@ -435,13 +445,20 @@
   "primo": "2026-10-13",
   "ultimo": "2026-10-13"
  },
+ "FTNT": {
+  "gruppi": [
+   "picco+folla"
+  ],
+  "primo": "2026-10-28",
+  "ultimo": "2026-10-28"
+ },
  "GEV": {
   "gruppi": [
    "picco",
    "controllo"
   ],
   "primo": "2026-10-22",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "GIS": {
   "gruppi": [
@@ -500,7 +517,7 @@
    "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "GOOGL": {
   "gruppi": [
@@ -508,7 +525,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "GRND": {
   "gruppi": [
@@ -526,10 +543,11 @@
  },
  "HBM": {
   "gruppi": [
-   "controllo"
+   "controllo",
+   "folla"
   ],
   "primo": "2026-10-16",
-  "ultimo": "2026-10-21"
+  "ultimo": "2026-10-28"
  },
  "HD": {
   "gruppi": [
@@ -552,7 +570,7 @@
    "folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "HTZ": {
   "gruppi": [
@@ -592,6 +610,13 @@
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-22"
+ },
+ "ICE": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-28",
+  "ultimo": "2026-10-28"
  },
  "IG": {
   "gruppi": [
@@ -637,7 +662,7 @@
    "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "JD": {
   "gruppi": [
@@ -713,10 +738,11 @@
  },
  "LITE": {
   "gruppi": [
-   "controllo"
+   "controllo",
+   "picco+folla"
   ],
   "primo": "2026-10-13",
-  "ultimo": "2026-10-22"
+  "ultimo": "2026-10-28"
  },
  "LMT": {
   "gruppi": [
@@ -785,7 +811,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "MH": {
   "gruppi": [
@@ -824,7 +850,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "MSTR": {
   "gruppi": [
@@ -839,7 +865,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "NBIS": {
   "gruppi": [
@@ -847,7 +873,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "NEAR": {
   "gruppi": [
@@ -869,7 +895,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "NGL": {
   "gruppi": [
@@ -914,7 +940,7 @@
    "folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "OC": {
   "gruppi": [
@@ -954,7 +980,7 @@
    "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-22"
+  "ultimo": "2026-10-28"
  },
  "OWL": {
   "gruppi": [
@@ -995,6 +1021,13 @@
   "primo": "2026-10-09",
   "ultimo": "2026-10-26"
  },
+ "PRME": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-28",
+  "ultimo": "2026-10-28"
+ },
  "PS": {
   "gruppi": [
    "controllo"
@@ -1022,7 +1055,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "RE": {
   "gruppi": [
@@ -1046,7 +1079,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-23"
+  "ultimo": "2026-10-28"
  },
  "RNA": {
   "gruppi": [
@@ -1101,10 +1134,11 @@
  },
  "SLS": {
   "gruppi": [
-   "controllo"
+   "controllo",
+   "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-22"
+  "ultimo": "2026-10-28"
  },
  "SMA": {
   "gruppi": [
@@ -1149,7 +1183,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "SOFI": {
   "gruppi": [
@@ -1180,7 +1214,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-12",
-  "ultimo": "2026-10-23"
+  "ultimo": "2026-10-28"
  },
  "SPCE": {
   "gruppi": [
@@ -1195,7 +1229,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "SPMO": {
   "gruppi": [
@@ -1210,6 +1244,13 @@
   ],
   "primo": "2026-10-26",
   "ultimo": "2026-10-26"
+ },
+ "STRL": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-28",
+  "ultimo": "2026-10-28"
  },
  "STX": {
   "gruppi": [
@@ -1253,7 +1294,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-27"
+  "ultimo": "2026-10-28"
  },
  "TSM": {
   "gruppi": [
@@ -1305,7 +1346,7 @@
    "controllo"
   ],
   "primo": "2026-10-12",
-  "ultimo": "2026-10-26"
+  "ultimo": "2026-10-28"
  },
  "UUUU": {
   "gruppi": [
@@ -1320,6 +1361,13 @@
   ],
   "primo": "2026-10-19",
   "ultimo": "2026-10-21"
+ },
+ "VRT": {
+  "gruppi": [
+   "picco+folla"
+  ],
+  "primo": "2026-10-28",
+  "ultimo": "2026-10-28"
  },
  "VST": {
   "gruppi": [
@@ -1375,10 +1423,11 @@
  },
  "WEN": {
   "gruppi": [
-   "controllo"
+   "controllo",
+   "folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-10-14"
+  "ultimo": "2026-10-28"
  },
  "WFC": {
   "gruppi": [
@@ -1400,6 +1449,13 @@
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-10-09"
+ },
+ "XOM": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-10-28",
+  "ultimo": "2026-10-28"
  },
  "XXII": {
   "gruppi": [
