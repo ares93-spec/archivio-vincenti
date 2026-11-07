@@ -1,3 +1,4 @@
+VIVK: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
 DAY: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
 LINK: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
 TP: 403 Client Error: Forbidden for url: https://cdn-api.cboe.co
