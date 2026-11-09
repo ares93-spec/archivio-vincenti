@@ -1,4 +1,4 @@
-python analisi/polymarket_meteo_macro/verifica_ipotesi_dati.py
+python analisi/polymarket_meteo_macro/diagnosi_eventi.py
 # rilancio 1307
 # controllo tecnico 23/10
 # verifica ipotesi meteo 9/11
