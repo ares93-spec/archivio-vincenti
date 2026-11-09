@@ -1,3 +1,4 @@
-prova 1: eventi meteo letti 338, ripetuti 0; mercati scelti 772 (682 meteo, 90 macro), token unici 772; to_dict ok
-prova 2: eventi meteo letti 338, ripetuti 0; mercati scelti 772 (682 meteo, 90 macro), token unici 772; to_dict ok
-prova 3: eventi meteo letti 338, ripetuti 0; mercati scelti 772 (682 meteo, 90 macro), token unici 772; to_dict ok
+eventi chiusi validi 26, scartati (formato) 2606
+aeroporti 1, senza coordinate o fuso: []
+prezzi da leggere: 286
+esiti salvati 286, con prezzo 286, eventi 26; durata 0.5 minuti
