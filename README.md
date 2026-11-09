@@ -108,7 +108,7 @@ un'operatività.
 | Data | Cosa |
 |---|---|
 | venerdì 23/10/2026 | Controllo tecnico: errori, dimensioni, tempi del giro → [resoconto](analisi/resoconti/2026-10-23_controllo_tecnico.md) |
-| lunedì 9/11/2026 | Polymarket meteo e macro: analisi del Test 1 (libri ordini) e verifica dell'ipotesi esplorativa (sezione 5) |
+| lunedì 9/11/2026 | Polymarket meteo e macro: analisi del Test 1 e verifica dell'ipotesi esplorativa (sezione 5), fatte → [resoconto](analisi/resoconti/2026-11-09_polymarket_meteo_macro.md) |
 | venerdì 4/12/2026 | Prima lettura della direzione 2 (circa 8 settimane), solo se ci sono almeno 100 eventi |
 | venerdì 8/1/2027 | Verdetto della direzione 2 (circa 12 settimane) |
 | lunedì 11/1/2027 | Prima prova di persistenza di Polymarket e Hyperliquid (3 mesi), solo se la direzione 2 ha dato un esito chiaro |
@@ -121,10 +121,11 @@ sono in [analisi/polymarket_meteo_macro/regole.md](analisi/polymarket_meteo_macr
 
 | Test | Stato |
 |---|---|
-| **1. Libri ordini** di circa 900 mercati meteo e macro, ogni 10 minuti, più tutti gli scambi | in corso fino al 6/11/2026 (`.github/workflows/libri.yml`, dati in `dati_test/libri/`) |
+| **1. Libri ordini** di circa 900 mercati meteo e macro, ogni 10 minuti, più tutti gli scambi | concluso il 6/11/2026, analizzato il 9/11/2026: spread mediano 2¢ (meteo e macro), somma dei SÌ fuori da 1 $ solo nell'1% delle fotografie e per meno di 1¢, volume meteo circa 350.000 $ al giorno; copertura 82%, scambi mancanti dal 3/11 → [resoconto](analisi/resoconti/2026-11-09_polymarket_meteo_macro.md) |
 | **2. Modello meteo contro mercato** su 1.220 eventi risolti | **NON SUPERATO** il 9/10/2026: Brier 0,801 per il modello contro 0,674 per il mercato; il mercato vince in 36 città su 37 |
 | Calibrazione dei prezzi | meteo: esiti sotto i 5¢ cari di circa 0,2¢ (significativo ma piccolo); macro: nessuna distorsione |
-| Ipotesi esplorativa: esiti meteo a 5-30¢ cari | approvata il 9/10/2026; verifica sugli eventi dal 10/10 al 6/11/2026, il 9/11/2026 |
+| Ipotesi esplorativa: esiti meteo a 5-30¢ cari | **SUPERATA** il 9/11/2026 secondo le regole (−7,1¢, −18 errori standard; +14¢ al prezzo lettera), **con riserva**: l'effetto viene soprattutto dalle minime, i cui prezzi CLOB vengono da libri vuoti; sulle sole massime −1,6¢ e al prezzo denaro nessun vantaggio |
+| **3. Simulazione su carta del market maker** | regole scritte il 9/11/2026 in `regole.md`, **non eseguito**: servono l'approvazione del proprietario, una nuova raccolta di almeno 4 settimane e la lettura degli scambi sistemata |
 
 ## 6. Limiti noti
 

@@ -1,0 +1,73 @@
+VERIFICA DELL'IPOTESI ESPLORATIVA METEO (regole.md, 9/10/2026); calcolo del 9/11/2026
+esiti letti 27478, eventi 2498, giorni 2026-10-10 - 2026-11-06, città (aeroporti) 49
+eventi con al massimo 2 prezzi mancanti: 2498 (scartati 0)
+eventi validi senza previsione Open-Meteo del giorno (nel Test 2 sarebbero stati esclusi): 0
+eventi per tipo: max 1305, min 1193
+somma dei prezzi CLOB degli esiti di un evento (controllo, senza verdetto): max: mediana 1.018, eventi con somma > 1,5: 0.0%; min: mediana 2.945, eventi con somma > 1,5: 82.9%
+
+Calibrazione, tutti gli eventi validi (prezzo CLOB alla mezzanotte locale)
+        fascia      n  prezzo medio  freq. reale  err.std  diff/err
+   [0.0, 0.05)  12613        0.0085       0.0042   0.0006     -7.51
+  [0.05, 0.15)   2651        0.0889       0.0558   0.0045     -7.42
+   [0.15, 0.3)   2589        0.2272       0.1178   0.0063    -17.27
+    [0.3, 0.5)   8591        0.3675       0.1759   0.0041    -46.66
+    [0.5, 0.7)   1007        0.5479       0.4598   0.0157     -5.61
+   [0.7, 0.85)     24        0.7315       0.6250   0.0988     -1.08
+  [0.85, 0.95)      3        0.9017       1.0000   0.0000   5385.94
+
+Calibrazione, solo max (controllo, senza verdetto)
+        fascia      n  prezzo medio  freq. reale  err.std  diff/err
+   [0.0, 0.05)   9907        0.0064       0.0047   0.0007     -2.42
+  [0.05, 0.15)   1377        0.0902       0.0813   0.0074     -1.20
+   [0.15, 0.3)   1024        0.2215       0.1963   0.0124     -2.03
+    [0.3, 0.5)   1457        0.3922       0.3960   0.0128      0.30
+    [0.5, 0.7)    565        0.5723       0.6212   0.0204      2.40
+   [0.7, 0.85)     22        0.7330       0.6364   0.1026     -0.94
+  [0.85, 0.95)      3        0.9017       1.0000   0.0000   5385.94
+
+Calibrazione, solo min (controllo, senza verdetto)
+        fascia      n  prezzo medio  freq. reale  err.std  diff/err
+   [0.0, 0.05)   2706        0.0163       0.0022   0.0009    -15.52
+  [0.05, 0.15)   1274        0.0876       0.0283   0.0046    -12.78
+   [0.15, 0.3)   1565        0.2310       0.0665   0.0063    -26.13
+    [0.3, 0.5)   7134        0.3625       0.1309   0.0040    -57.99
+    [0.5, 0.7)    442        0.5168       0.2534   0.0207    -12.73
+   [0.7, 0.85)      2        0.7150       0.5000   0.3536     -0.61
+
+FASCIA 5-30¢: n 5240 esiti in 2119 eventi; prezzo medio 0.1573; frequenza reale 0.0865; errore standard 0.0039; differenza -7.08¢ = -18.24 errori standard
+CRITERIO 1 (frequenza inferiore al prezzo di almeno 2 errori standard): SÌ
+  per tipo: max n 2401 prezzo 0.1462 freq 0.1304 (-2.30 e.s.); min n 2839 prezzo 0.1666 freq 0.0493 (-28.87 e.s.)
+  controllo con ricampionamento per evento (10.000, senza verdetto), tutti: frequenza - prezzo -7.08¢, IC95% -7.79 / -6.36¢
+  controllo con ricampionamento per evento (10.000, senza verdetto), max: frequenza - prezzo -1.58¢, IC95% -2.71 / -0.46¢
+  controllo con ricampionamento per evento (10.000, senza verdetto), min: frequenza - prezzo -11.73¢, IC95% -12.55 / -10.90¢
+  per metà del periodo (taglio al 2026-10-24): prima n 2224 prezzo 0.1538 freq 0.0940 (-9.67 e.s.); seconda n 3016 prezzo 0.1598 freq 0.0809 (-15.89 e.s.)
+
+=== PREZZI DEL LIBRO (Test 1) ===
+esiti con almeno una fotografia del libro: 7392 in 672 eventi (città: atlanta, buenos-aires, chicago, dallas, london, miami, nyc, paris, seattle, seoul, tokyo, toronto)
+esiti con una fotografia prima della decisione: 7392 in 672 eventi; età dell'ultima fotografia: mediana 0 min, entro 30 min 94.3%, oltre 6 ore 0.0%
+  spread del libro alla decisione per gli esiti 5-30¢: max mediana 3.0¢; min mediana 9.0¢
+
+FASCIA 5-30¢ (scelta col prezzo CLOB), esiti con libro: 1427 in 591 eventi; senza lettera: 0; senza denaro: 406
+  stesso sottoinsieme al prezzo CLOB: prezzo medio 0.1480, frequenza 0.0827, e.s. 0.0073 (-8.96 e.s.)
+  al LETTERA (ask), misura del verdetto: n 1427; prezzo medio 0.2222, frequenza 0.0827 (-19.13 e.s.); vantaggio medio di chi vende +13.95¢ per azione (e.s. 0.81¢, t +17.20)
+    per tipo: max n 588 vantaggio +4.90¢ (e.s. 1.27¢), prezzo CLOB 0.1435, freq 0.1088; min n 839 vantaggio +20.29¢ (e.s. 1.00¢), prezzo CLOB 0.1512, freq 0.0644
+    stesso conto solo con fotografie entro 30 min: n 1343, vantaggio +14.43¢
+    lettera meno prezzo CLOB: mediana +3.00¢, media +7.41¢
+  al DENARO (bid), misura secondaria: n 1021; prezzo medio 0.1071, frequenza 0.1126 (+0.56 e.s.); vantaggio medio di chi vende -0.55¢ per azione (e.s. 0.97¢, t -0.57)
+    per tipo: max n 588 vantaggio +1.84¢ (e.s. 1.27¢), prezzo CLOB 0.1435, freq 0.1088; min n 433 vantaggio -3.81¢ (e.s. 1.48¢), prezzo CLOB 0.1392, freq 0.1178
+  al PREZZO MEDIO DEL LIBRO, solo confronto: n 1021; prezzo medio 0.1427, frequenza 0.1126 (-3.04 e.s.); vantaggio medio di chi vende +3.01¢ per azione (e.s. 0.96¢, t +3.12)
+    per tipo: max n 588 vantaggio +3.37¢ (e.s. 1.27¢), prezzo CLOB 0.1435, freq 0.1088; min n 433 vantaggio +2.52¢ (e.s. 1.49¢), prezzo CLOB 0.1392, freq 0.1178
+
+Calibrazione al prezzo lettera, eventi con libro (fasce scelte con la lettera)
+        fascia      n  prezzo medio  freq. reale  err.std  diff/err
+   [0.0, 0.05)   3453        0.0099       0.0023   0.0008     -9.29
+  [0.05, 0.15)    911        0.0884       0.0384   0.0064     -7.85
+   [0.15, 0.3)    574        0.2119       0.1167   0.0134     -7.11
+    [0.3, 0.5)    705        0.4058       0.3050   0.0173     -5.81
+    [0.5, 0.7)   1207        0.6380       0.2212   0.0119    -34.88
+   [0.7, 0.85)    386        0.7328       0.1788   0.0195    -28.41
+  [0.85, 0.95)     17        0.9138       0.1765   0.0925     -7.97
+   [0.95, 1.0)     87        0.9782       0.0000   0.0000 -288539.75
+
+CRITERIO 2 (vantaggio medio positivo vendendo al prezzo lettera): SÌ
+VERDETTO IPOTESI: SUPERATA

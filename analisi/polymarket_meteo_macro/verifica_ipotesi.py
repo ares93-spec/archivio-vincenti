@@ -76,7 +76,14 @@ def main():
     log(f'eventi validi senza previsione Open-Meteo del giorno (nel Test 2 sarebbero stati esclusi): '
         f'{d[~d.prev_ok].id.nunique()}')
     c = d.dropna(subset=['p'])
+    som = c.groupby('id').agg(somma=('p', 'sum'), tipo=('tipo', 'first'))
+    log('eventi per tipo: ' + ', '.join(f'{k} {v}' for k, v in som.tipo.value_counts().items()))
+    log('somma dei prezzi CLOB degli esiti di un evento (controllo, senza verdetto): ' + '; '.join(
+        f'{k}: mediana {g.somma.median():.3f}, eventi con somma > 1,5: {(g.somma > 1.5).mean():.1%}'
+        for k, g in som.groupby('tipo')))
     calibrazione(c, titolo='Calibrazione, tutti gli eventi validi (prezzo CLOB alla mezzanotte locale)')
+    for k, g in c.groupby('tipo'):
+        calibrazione(g, titolo=f'Calibrazione, solo {k} (controllo, senza verdetto)')
     fa = c[(c.p >= .05) & (c.p < .30)]
     n, pm, fr, se, z = riga_fascia(fa.p, fa.y)
     log(f'\nFASCIA 5-30¢: n {n} esiti in {fa.id.nunique()} eventi; prezzo medio {pm:.4f}; frequenza reale {fr:.4f}; '
@@ -86,6 +93,16 @@ def main():
     log(f'  per tipo: ' + '; '.join(
         f'{k} n {len(g)} prezzo {g.p.mean():.4f} freq {g.y.mean():.4f} ({riga_fascia(g.p, g.y)[4]:+.2f} e.s.)'
         for k, g in fa.groupby('tipo')))
+    rng = np.random.default_rng(20261009)
+    for k, h in [('tutti', fa)] + list(fa.groupby('tipo')):
+        e = h.groupby('id').agg(s=('p', 'sum'), y=('y', 'sum'), n=('p', 'size'))
+        bs = []
+        for _ in range(10000):
+            i = rng.integers(0, len(e), len(e))
+            bs.append((e.y.values[i].sum() - e.s.values[i].sum()) / e.n.values[i].sum())
+        lo, hi = np.percentile(bs, [2.5, 97.5])
+        log(f'  controllo con ricampionamento per evento (10.000, senza verdetto), {k}: frequenza - prezzo '
+            f'{(e.y.sum() - e.s.sum()) / e.n.sum() * 100:+.2f}¢, IC95% {lo * 100:+.2f} / {hi * 100:+.2f}¢')
     meta = sorted(fa.giorno.unique())[len(fa.giorno.unique()) // 2]
     log(f'  per metà del periodo (taglio al {meta}): ' + '; '.join(
         f'{k} n {len(g)} prezzo {g.p.mean():.4f} freq {g.y.mean():.4f} ({riga_fascia(g.p, g.y)[4]:+.2f} e.s.)'
@@ -99,7 +116,7 @@ def main():
     log(f'esiti con almeno una fotografia del libro: {len(con)} in {con.id.nunique()} eventi '
         f'(città: {", ".join(sorted(con.serie.str.split("-daily").str[0].unique()))})')
     con['t_dec'] = pd.to_datetime(con.decisione, unit='s').astype('datetime64[us]')
-    q = pd.merge_asof(con.sort_values('t_dec'), lib.rename(columns={'token_si': 'token', 'ora': 'ora_libro'})
+    q = pd.merge_asof(con.sort_values('t_dec'), lib.drop(columns='id').rename(columns={'token_si': 'token', 'ora': 'ora_libro'})
                       .sort_values('ora_libro'), left_on='t_dec', right_on='ora_libro', by='token',
                       direction='backward')
     q = q.dropna(subset=['ora_libro'])
@@ -111,6 +128,9 @@ def main():
         f'fotografia: mediana {q.eta_min.median():.0f} min, entro 30 min {(q.eta_min <= 30).mean():.1%}, '
         f'oltre 6 ore {(q.eta_min > 360).mean():.1%}')
     fq = q[(q.p >= .05) & (q.p < .30)].copy()
+    sp = (fq.ask - fq.bid) * 100
+    log(f'  spread del libro alla decisione per gli esiti 5-30¢: ' + '; '.join(
+        f'{k} mediana {h.median():.1f}¢' for k, h in sp.groupby(fq.tipo)))
     log(f'\nFASCIA 5-30¢ (scelta col prezzo CLOB), esiti con libro: {len(fq)} in {fq.id.nunique()} eventi; '
         f'senza lettera: {fq.ask.isna().sum()}; senza denaro: {fq.bid.isna().sum()}')
     n2, pm2, fr2, se2, z2 = riga_fascia(fq.p, fq.y)
@@ -125,8 +145,12 @@ def main():
         sev = v.std(ddof=1) / math.sqrt(len(v))
         n3, pm3, fr3, se3, z3 = riga_fascia(g[col], g.y)
         risultati[col] = v.mean()
+        per_tipo = '; '.join(f'{k} n {len(h)} vantaggio {(h[col] - h.y).mean() * 100:+.2f}¢ '
+                             f'(e.s. {(h[col] - h.y).std(ddof=1) / math.sqrt(len(h)) * 100:.2f}¢), prezzo CLOB '
+                             f'{h.p.mean():.4f}, freq {h.y.mean():.4f}' for k, h in g.groupby('tipo'))
         log(f'  al {nome}: n {len(g)}; prezzo medio {pm3:.4f}, frequenza {fr3:.4f} ({z3:+.2f} e.s.); vantaggio medio '
             f'di chi vende {v.mean() * 100:+.2f}¢ per azione (e.s. {sev * 100:.2f}¢, t {v.mean() / sev:+.2f})')
+        log(f'    per tipo: {per_tipo}')
         if col == 'ask':
             log(f'    stesso conto solo con fotografie entro 30 min: ' + (
                 lambda h: f'n {len(h)}, vantaggio {(h.ask - h.y).mean() * 100:+.2f}¢' if len(h) else 'nessuna')(

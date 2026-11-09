@@ -103,3 +103,77 @@ giorno, gli esiti SÌ fra 5¢ e 30¢ valgono meno del prezzo.
   medio).
 - **Se superata**, il passo dopo è la simulazione su carta di un market maker che espone lettere su quelle fasce, con le
   regole del Test 3.
+
+## Esito del Test 1 (analisi del 9/11/2026)
+
+Misure in [risultati_test1.txt](risultati_test1.txt) (script `test1_analisi.py`), resoconto in
+[analisi/resoconti/2026-11-09_polymarket_meteo_macro.md](../resoconti/2026-11-09_polymarket_meteo_macro.md).
+
+- **Copertura**: 3.375 fotografie su 4.096 attese (dal 9/10 13:12 al 6/11 23:48 UTC); 60 buchi oltre 30 minuti, 105 ore
+  in tutto (15,4%), il più lungo 7,5 ore, tutti fra un giro di raccolta e il successivo (86 ore dal 26/10). Gli scambi
+  mancano dal 2/11 20:38 UTC: dal 3/11 nessun giro ha registrato scambi e i giri sono rallentati a 13-15 minuti.
+- **Spread mediano**: meteo 2¢ (medio 8,5¢), macro 2¢ (medio 4,5¢); fra 5¢ e 95¢ meteo 4¢ (medio 15,9¢), macro 3¢.
+  Nel meteo il 52% delle fotografie non ha denaro sull'esito SÌ.
+- **Somma dei SÌ**: lettere sotto 1 $ nello 0,20% delle fotografie complete, denari sopra 1 $ nello 0,90%; margini
+  mediani 0,8¢ e 0,6¢ su circa 5 azioni: nessuno spazio pratico.
+- **Volume** (9/10-2/11): meteo 9,2 milioni $ su 6.476 mercati con scambi (mediana 347 $ per mercato, 8.370 $ per
+  evento); macro 19,7 milioni $ su 157 mercati (mediana 1.101 $).
+- **Premi**: nei mercati meteo con premi, mediana per istante 13,8 $ al giorno ogni 1.000 $ esposti entro lo spread dei
+  premi (macro 2,3 $); è un massimo lordo da dividere con chi si aggiunge.
+
+## Esito della verifica dell'ipotesi esplorativa (9/11/2026): SUPERATA secondo le regole, con una riserva
+
+Conti in [risultati_verifica_ipotesi.txt](risultati_verifica_ipotesi.txt) (dati: `verifica_ipotesi_dati.py`, conto:
+`verifica_ipotesi.py`). 2.498 eventi dal 10/10 al 6/11/2026 (1.305 massime, 1.193 minime, 49 città).
+
+- **Criterio 1**: fascia 5-30¢, 5.240 esiti, prezzo medio 15,73¢, frequenza reale 8,65%, errore standard 0,39¢:
+  −7,08¢, pari a −18,2 errori standard. Superato.
+- **Criterio 2**: 1.427 esiti della fascia con libro (12 città, 591 eventi); vendendo al prezzo lettera dell'ultima
+  fotografia il vantaggio medio è +13,95¢ per azione (errore standard 0,81¢). Superato. Al prezzo denaro (misura
+  secondaria, 1.021 esiti) il vantaggio è −0,55¢ (errore standard 0,97¢).
+- **Riserva da leggere prima di qualsiasi passo**: dal 10/10 le minime sono quasi metà degli eventi (nel Test 2 erano il
+  12%) e i loro prezzi CLOB alla mezzanotte non sono prezzi veri: la somma dei prezzi di un evento di minima ha mediana
+  2,95 (83% degli eventi sopra 1,5), perché i libri sono vuoti o larghissimi (spread mediano 9¢ nella fascia, spesso
+  senza denaro). Gran parte dell'effetto viene da lì. Sulle sole massime (controllo, senza verdetto) l'effetto è molto
+  più piccolo ma c'è: −1,58¢ (ricampionamento per evento: IC95% −2,71 / −0,46¢), vantaggio al prezzo lettera +4,90¢,
+  al prezzo denaro +1,84¢ (errore standard 1,27¢).
+- Nota sui dati: dal 10/10 la fonte di risoluzione non è più Wunderground (weather.gov fino al 22/10, poi METAR di
+  aviationweather.gov). Il codice della stazione serve solo per il fuso orario; gli eventi senza fonte (134: Tel Aviv,
+  Hong Kong, Mosca, Istanbul in parte del periodo) sono esclusi come lo sarebbero stati nel Test 2.
+
+Vendere al prezzo lettera vale solo se qualcuno compra a quel prezzo: è proprio ciò che il Test 3 deve misurare.
+
+## Test 3: simulazione su carta del market maker (regole scritte il 9/11/2026, prima di qualsiasi simulazione; NON eseguito)
+
+Le regole vanno approvate dal proprietario in chat prima di raccogliere i dati.
+
+- **Universo**: eventi `daily-temperature` delle 12 città del Test 1, massime e minime, risolti in un **periodo nuovo**
+  di raccolta di almeno 4 settimane che inizia dopo l'approvazione. I dati del Test 1 servono solo a collaudare il
+  simulatore, senza verdetto (le loro risoluzioni sono già state guardate).
+- **Ordine**: alla mezzanotte locale che apre il giorno, per ogni esito SÌ con prezzo CLOB (ultimo punto nelle 12 ore
+  prima) fra 5¢ e 30¢, una vendita limite di 20 azioni al prezzo `max(lettera migliore − 1 tick, denaro migliore +
+  1 tick)` dell'ultima fotografia del libro, che deve avere al massimo 30 minuti; senza fotografia, o senza lettera,
+  nessun ordine. L'ordine resta fermo fino alla mezzanotte locale che chiude il giorno, senza modifiche né
+  cancellazioni.
+- **Esecuzione** (ipotesi prudente): l'ordine si considera eseguito solo da scambi avvenuti dopo il suo inserimento a
+  un prezzo strettamente migliore del nostro: acquisti di SÌ a un prezzo maggiore del nostro, oppure vendite di NO a un
+  prezzo minore di 1 − il nostro. Le azioni eseguite sono la somma delle quantità di quegli scambi, fino a 20.
+- **Risultato**: per azione eseguita, prezzo − esito (1 se il SÌ vince), meno le commissioni del `feeSchedule` del
+  mercato se diverse da zero. Capitale impegnato: 1 − prezzo per azione venduta. I premi di liquidità non entrano nel
+  risultato principale.
+- **Misure**: ordini, quota eseguita, risultato medio per azione eseguita, risultato totale, risultato sul capitale;
+  frequenza del SÌ negli ordini eseguiti contro quelli non eseguiti (selezione avversa); tutto separato per massima e
+  minima.
+- **Criterio di successo**, tutti richiesti: almeno 200 ordini eseguiti (se meno, la raccolta continua fino a 200);
+  risultato medio per azione eseguita positivo con intervallo bootstrap al 95% (per evento, 10.000 ricampionamenti,
+  seme 20261109) che esclude zero; risultato positivo in entrambe le metà del periodo, in ordine di data.
+
+**Cosa servirebbe per eseguirlo**:
+1. Approvazione esplicita di queste regole da parte del proprietario.
+2. Una nuova raccolta: `libri.py` ha `FINE_TEST` al 6/11/2026; andrebbe riattivato per il nuovo periodo (bastano i
+   mercati meteo delle 12 città) e il workflow `libri.yml` ripartirebbe da solo. È una modifica all'automazione da
+   approvare prima.
+3. Sistemare la lettura degli scambi, che dal 3/11 non restituisce nulla (va capito il motivo) e legge al massimo 500
+   scambi per gruppo di 20 mercati: per il Test 3 gli scambi sono indispensabili, quindi meglio una lettura per mercato,
+   e un avviso in `STATO.md` se un giro non ne registra.
+4. Uno script `test3_simulazione.py` collaudato sui dati del Test 1 (dal 10/10 al 2/11, senza verdetto).

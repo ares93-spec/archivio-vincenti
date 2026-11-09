@@ -1,0 +1,197 @@
+TEST 1 - LIBRI ORDINI POLYMARKET METEO E MACRO (regole.md, 9/10/2026); calcolo del 9/11/2026
+fotografie ricostruite (esito x istante): 2,638,901; file in dati_test/libri/2026
+fotografie attese con un passo di 10 minuti fra la prima e l'ultima: 4,096; registrate 3,375
+
+=== COPERTURA ===
+giri di raccolta (file): 103; fotografie (istanti): 3375; prima 2026-10-09 13:12:05 UTC, ultima 2026-11-06 23:47:59 UTC
+intervallo fra fotografie consecutive: mediana 10.0 min; dentro un giro di raccolta 10.0 min (mediana delle mediane)
+buchi oltre 30 minuti: 60, in tutto 105.0 ore su 682.6 (15.4%)
+buchi fra un giro di raccolta e il successivo: 60 su 60; ore di buco dal 26/10: 85.9
+buco più lungo: 7.5 ore; mediana dei buchi 0.7 ore
+giri di raccolta con passo mediano oltre 12 minuti: 9 (dal 2026-11-03_0045 al 2026-11-06_2252; passo mediano 13.5-14.9 min)
+
+Per giorno (UTC): fotografie, ore del giorno con almeno una fotografia, ore senza
+            fotografie  ore  ore_senza
+g                                     
+2026-10-09          65   11         13
+2026-10-10         139   24          0
+2026-10-11         136   24          0
+2026-10-12         136   24          0
+2026-10-13         136   24          0
+2026-10-14         135   24          0
+2026-10-15         137   24          0
+2026-10-16         136   24          0
+2026-10-17         136   24          0
+2026-10-18         136   24          0
+2026-10-19         136   24          0
+2026-10-20         136   24          0
+2026-10-21         136   24          0
+2026-10-22         136   24          0
+2026-10-23         126   23          1
+2026-10-24         136   24          0
+2026-10-25         136   24          0
+2026-10-26          78   16          8
+2026-10-27         130   23          1
+2026-10-28         108   19          5
+2026-10-29         101   20          4
+2026-10-30         105   19          5
+2026-10-31         129   24          0
+2026-11-01         110   21          3
+2026-11-02          89   16          8
+2026-11-03          54   15          9
+2026-11-04          76   19          5
+2026-11-05          80   19          5
+2026-11-06          81   21          3
+giorni con fotografie: 29; ore con almeno una fotografia: 626 su 696
+
+Ore UTC più spesso scoperte (giorni senza fotografie in quell'ora, su 29):
+  00:1, 01:1, 02:1, 03:1, 04:2, 05:2, 06:1, 07:3, 08:3, 09:3, 10:4, 11:8, 12:6, 13:3, 14:1, 15:0, 16:0, 17:0, 18:2, 19:5, 20:9, 21:9, 22:4, 23:1
+
+=== SPREAD (lettera - denaro dell'esito SÌ, in centesimi, per fotografia) ===
+fotografie esito x istante: meteo 2,341,270, macro 297,631
+quota con entrambi i lati: macro 96.1%, meteo 46.4%
+quota senza denaro: macro 3.9%, meteo 52.4%; senza lettera: macro 0.0%, meteo 1.7%
+libri incrociati o a spread nullo (lettera <= denaro): 0
+
+Tutti gli esiti con entrambi i lati
+                            n  medio  mediano   p90
+macro 0-6 h               396   3.99      2.0  13.0
+      2-7 g             53336   2.70      1.3   6.5
+      24-48 h            9610   2.86      1.0   8.0
+      6-24 h             3884   3.25      1.8   8.0
+      7-45 g           218730   5.01      2.2   9.3
+      TUTTE            285956   4.48      2.0   9.0
+meteo 0-6 h             89222  15.36      2.4  67.0
+      24-48 h          510568   7.04      2.0  19.8
+      6-24 h           356999   6.59      2.0  16.0
+      TUTTE           1087303   8.54      2.0  25.0
+      scaduto (<0 h)   130514  15.04      3.0  65.4
+
+Solo esiti con prezzo medio fra 5¢ e 95¢
+                           n  medio  mediano   p90
+macro 0-6 h              150   7.59      4.5  18.1
+      2-7 g            26644   4.10      2.9  10.6
+      24-48 h           5088   4.62      2.0  13.4
+      6-24 h            1855   5.32      3.0  13.5
+      7-45 g          110076   7.64      3.0  19.0
+      TUTTE           143813   6.85      3.0  17.0
+meteo 0-6 h            47494  27.69      6.0  83.0
+      24-48 h         252103  12.52      4.0  40.0
+      6-24 h          170312  12.24      4.0  44.0
+      TUTTE           529438  15.87      4.0  55.0
+      scaduto (<0 h)   59529  30.97     12.0  91.0
+
+Solo esiti con prezzo medio fra 5¢ e 30¢ (fascia dell'ipotesi)
+                           n  medio  mediano   p90
+macro 0-6 h               92   8.46      6.0  18.1
+      2-7 g            17250   5.05      3.0  12.6
+      24-48 h           3384   5.81      3.0  15.7
+      6-24 h            1218   5.65      4.0  13.7
+      7-45 g           79298   8.04      4.0  19.9
+      TUTTE           101242   7.43      3.6  18.1
+meteo 0-6 h            18606   9.49      4.0  30.9
+      24-48 h         148423   9.44      4.0  24.0
+      6-24 h           89485   7.79      4.0  20.0
+      TUTTE           279839   9.28      4.0  25.0
+      scaduto (<0 h)   23325  13.79      8.0  37.8
+
+=== SOMMA DEI SÌ NEGLI EVENTI A ESITI MULTIPLI (stessa fotografia) ===
+eventi con almeno 3 esiti: 763 (meteo 744, macro 19); esiti per evento: mediana 11
+fotografie evento x istante: 255,204; complete (libro di tutti gli esiti): 236,368
+
+TUTTI: fotografie complete 236,368 (eventi 763); con lettera su tutti gli esiti 212,146
+  somma delle lettere < 1 $: 429 (0.20% delle fotografie con tutte le lettere), in 89 eventi; con margine >= 1¢: 196
+  somma dei denari > 1 $: 2,136 (0.90%), in 220 eventi; con margine >= 1¢: 619
+  quando la somma delle lettere è < 1: margine mediano 0.80¢ (max 4.80¢), quantità eseguibile mediana 5.0 azioni per esito (al primo livello)
+  quando la somma dei denari è > 1: margine mediano 0.60¢ (max 14.70¢), quantità eseguibile mediana 5.8 azioni (minimo fra gli esiti con denaro)
+  somma delle lettere: mediana 1.156; somma dei denari: mediana 0.919
+
+macro: fotografie complete 36,332 (eventi 19); con lettera su tutti gli esiti 36,231
+  somma delle lettere < 1 $: 227 (0.63% delle fotografie con tutte le lettere), in 10 eventi; con margine >= 1¢: 105
+  somma dei denari > 1 $: 631 (1.74%), in 16 eventi; con margine >= 1¢: 153
+  quando la somma delle lettere è < 1: margine mediano 0.90¢ (max 4.70¢), quantità eseguibile mediana 5.3 azioni per esito (al primo livello)
+  quando la somma dei denari è > 1: margine mediano 0.50¢ (max 3.10¢), quantità eseguibile mediana 20.0 azioni (minimo fra gli esiti con denaro)
+  somma delle lettere: mediana 1.128; somma dei denari: mediana 0.913
+
+meteo: fotografie complete 200,036 (eventi 744); con lettera su tutti gli esiti 175,915
+  somma delle lettere < 1 $: 202 (0.11% delle fotografie con tutte le lettere), in 79 eventi; con margine >= 1¢: 91
+  somma dei denari > 1 $: 1,505 (0.75%), in 204 eventi; con margine >= 1¢: 466
+  quando la somma delle lettere è < 1: margine mediano 0.80¢ (max 4.80¢), quantità eseguibile mediana 5.0 azioni per esito (al primo livello)
+  quando la somma dei denari è > 1: margine mediano 0.60¢ (max 14.70¢), quantità eseguibile mediana 5.0 azioni (minimo fra gli esiti con denaro)
+  somma delle lettere: mediana 1.176; somma dei denari: mediana 0.920
+
+=== VOLUME SCAMBIATO (Data API /trades, solo taker, senza doppioni) ===
+scambi letti 1,792,507, unici 591,579; dal 2026-09-30 21:18:33 al 2026-11-02 20:38:10 UTC
+giri di raccolta senza file degli scambi: 12, dal 2026-11-03_0045 al 2026-11-06_2252: dopo l'ultimo scambio registrato (2026-11-02 20:38:10 UTC) la Data API non ha restituito scambi e il volume di quei giorni manca
+i giri di raccolta durano 5 h 40 e partono ogni 6 ore circa: gli scambi dei buchi si recuperano solo in parte (la prima lettura di ogni giro chiede gli ultimi 500 scambi per gruppo di 20 mercati)
+scambi nel periodo 9/10-6/11: 586,127; controvalore 28,867,479 $; senza mercato noto 0
+
+macro: mercati seguiti 157, con almeno uno scambio 157; controvalore totale 19,657,060 $ in 54,913 scambi
+  controvalore per mercato: media 125,204 $, p10 162 $, p25 571 $, p50 1,101 $, p75 3,711 $, p90 9,672 $, p99 3,498,187 $, max 9,445,209 $
+  azioni per mercato: mediana 2,244; scambi per mercato: mediana 69
+  controvalore per evento: eventi 19, mediana 18,932 $, media 1,034,582 $
+  dimensione di uno scambio: mediana 12.25 $, media 357.97 $
+
+meteo: mercati seguiti 8184, con almeno uno scambio 6476; controvalore totale 9,210,419 $ in 531,214 scambi
+  controvalore per mercato: media 1,422 $, p10 20 $, p25 85 $, p50 347 $, p75 1,749 $, p90 4,421 $, p99 10,530 $, max 30,079 $
+  azioni per mercato: mediana 487; scambi per mercato: mediana 19
+  controvalore per evento: eventi 643, mediana 8,370 $, media 14,324 $
+  dimensione di uno scambio: mediana 5.03 $, media 17.34 $
+
+Controvalore per giorno (UTC), $:
+tipo            macro     meteo
+t                              
+2026-10-09   131043.0  326691.0
+2026-10-10    96155.0  377089.0
+2026-10-11    80245.0  371957.0
+2026-10-12   320400.0  421839.0
+2026-10-13   352456.0  355041.0
+2026-10-14  2061305.0  405714.0
+2026-10-15  1121922.0  419377.0
+2026-10-16   711252.0  457748.0
+2026-10-17    76653.0  347863.0
+2026-10-18   327297.0  326393.0
+2026-10-19   430513.0  402350.0
+2026-10-20   490699.0  351772.0
+2026-10-21   576501.0  335196.0
+2026-10-22  1020756.0  337700.0
+2026-10-23   782209.0  327022.0
+2026-10-24   847023.0  340615.0
+2026-10-25   991924.0  402823.0
+2026-10-26  1265812.0  329797.0
+2026-10-27  2158272.0  380089.0
+2026-10-28  4392880.0  407015.0
+2026-10-29   662504.0  378316.0
+2026-10-30   386655.0  400016.0
+2026-10-31    71147.0  362210.0
+2026-11-01    36498.0  340307.0
+2026-11-02   264940.0  305479.0
+
+scambi nuovi per lettura (tutti i mercati, ogni 10 minuti): mediana 151, max 18410; il limite di 500 vale per gruppo di 20 mercati, quindi nei momenti più attivi qualche scambio può mancare
+
+=== PREMI DI LIQUIDITÀ PER UNITÀ DI LIQUIDITÀ ESPOSTA ===
+liquidità esposta = profondità entro lo spread dei premi (denaro + lettera, in azioni) registrata nel libro;
+in dollari: azioni in denaro x prezzo medio + azioni in lettera x (1 - prezzo medio), cioè il capitale bloccato.
+fotografie con prezzo medio (servono entrambi i lati): meteo 1,087,303, macro 285,956
+spread massimo dei premi (¢): macro [2.5, 4.5], meteo [4.5]; taglia minima (azioni): macro [20.0, 26.0, 27.5, 30.0, 32.0, 35.0, 40.0, 42.5, 44.0, 50.0, 200.0], meteo [20.0, 26.0, 27.5, 30.0, 35.0, 36.0, 40.0, 46.666666666666664, 50.0, 52.0, 60.0, 68.0, 73.33333333333333, 80.0, 84.0, 100.0]
+
+TUTTI: fotografie con premi > 0: 49.0%; mercati con premi > 0: 4048 su 7183
+  per fotografia (mediana sugli istanti): premi disponibili 6,484 $/giorno, liquidità esposta 3,092,012 $ (17,241,802 azioni)
+  solo mercati con premi: premi 6,484 $/giorno su 1,286,298 $ esposti; rapporto per istante: mediana 4.76 $ al giorno per 1.000 $ esposti (p25 3.32, p75 6.79)
+  per mercato (mediana nel tempo del rapporto premi/esposto): mediana 42.93 $ al giorno per 1.000 $, p75 87.90, p90 194.91; per 1.000 azioni: 12.86 $/giorno
+  fotografie di mercati con premi ma nessuna liquidità entro lo spread dei premi: 24.4%
+
+macro: fotografie con premi > 0: 47.1%; mercati con premi > 0: 116 su 157
+  per fotografia (mediana sugli istanti): premi disponibili 2,298 $/giorno, liquidità esposta 2,700,698 $ (16,477,820 azioni)
+  solo mercati con premi: premi 2,298 $/giorno su 974,260 $ esposti; rapporto per istante: mediana 2.34 $ al giorno per 1.000 $ esposti (p25 1.58, p75 3.50)
+  per mercato (mediana nel tempo del rapporto premi/esposto): mediana 12.65 $ al giorno per 1.000 $, p75 40.17, p90 96.14; per 1.000 azioni: 3.54 $/giorno
+  fotografie di mercati con premi ma nessuna liquidità entro lo spread dei premi: 17.4%
+
+meteo: fotografie con premi > 0: 49.5%; mercati con premi > 0: 3932 su 7026
+  per fotografia (mediana sugli istanti): premi disponibili 4,079 $/giorno, liquidità esposta 350,838 $ (824,048 azioni)
+  solo mercati con premi: premi 4,079 $/giorno su 289,817 $ esposti; rapporto per istante: mediana 13.78 $ al giorno per 1.000 $ esposti (p25 9.53, p75 20.49)
+  per mercato (mediana nel tempo del rapporto premi/esposto): mediana 44.12 $ al giorno per 1.000 $, p75 89.14, p90 197.90; per 1.000 azioni: 19.56 $/giorno
+  fotografie di mercati con premi ma nessuna liquidità entro lo spread dei premi: 26.1%
+
+Nota: i premi si dividono fra tutti gli ordini che si qualificano, pesati per distanza dal prezzo medio e con
+taglia minima; il rapporto è quindi un massimo lordo per chi si aggiunge, non un rendimento ottenibile.
