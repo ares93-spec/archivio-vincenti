@@ -6,6 +6,7 @@ CLOB nelle 12 ore prima. Il fuso orario si ricava come nel Test 2 (Open-Meteo, t
 Uscita: eventi_verifica.csv.gz (un esito per riga). Il conto lo fa verifica_ipotesi.py.
 Va lanciato dal workflow "Analisi una tantum": dalla rete della sessione cloud le fonti non rispondono.
 """
+import re
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -20,6 +21,24 @@ sys.path.insert(0, str(QUI))
 import test2_storico as t2  # noqa: E402  stesso codice del Test 2
 
 t2.INIZIO, t2.FINE = date(2026, 10, 10), date(2026, 11, 6)
+
+# Dal 10/10/2026 la fonte di risoluzione non è più Wunderground: weather.gov (…/timeseries?site=eglc) fino al 22/10,
+# poi METAR di aviationweather.gov (…/metar?ids=EGLC…). Il codice della stazione serve solo per coordinate e fuso orario:
+# lo si legge anche da questi indirizzi e si passa alla lettura del Test 2, che resta invariata. Gli eventi senza fonte
+# (Tel Aviv, Hong Kong, Mosca, Istanbul) restano esclusi, come lo sarebbero stati nel Test 2.
+_compatta_t2 = t2.compatta_meteo
+RX_STAZIONE = re.compile(r'(?:site|ids)=([A-Za-z0-9]{4})\b')
+
+
+def compatta(e):
+    fonte = e.get('resolutionSource') or ''
+    m = RX_STAZIONE.search(fonte)
+    if m and 'wunderground' not in fonte:
+        e = dict(e, resolutionSource=f'https://www.wunderground.com/stazione/{m.group(1).upper()}', fonte_vera=fonte)
+    return _compatta_t2(e)
+
+
+t2.compatta_meteo = compatta
 
 
 def main():
