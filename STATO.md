@@ -1,11 +1,11 @@
 # Stato dell'archivio
 
-Ultimo giro: **11/11/2026 02:28** ora italiana (16.5 minuti).
+Ultimo giro: **12/11/2026 03:30** ora italiana (17.3 minuti).
 
 | Fonte | Esito | Dettaglio |
 |---|---|---|
-| ApeWisdom | ✅ | 1451 righe (832 titoli in all-stocks), 27 KB |
-| Cboe | ✅ | scelti oggi 40 (picco 2, folla 25, controllo 15); seguiti 248; letti 224, senza catena 24; 19 KB + 71 KB |
+| ApeWisdom | ✅ | 1536 righe (867 titoli in all-stocks), 28 KB |
+| Cboe | ✅ | scelti oggi 40 (picco 2, folla 25, controllo 15); seguiti 253; letti 229, senza catena 24; 20 KB + 72 KB |
 | Polymarket | ❌ | classifica OVERALL/DAY/PNL: 410 Client Error: Gone for url: https://data-api.polymarket.com/v1/leaderboard?c |
 | Polymarket | ❌ | classifica OVERALL/WEEK/PNL: 410 Client Error: Gone for url: https://data-api.polymarket.com/v1/leaderboard?c |
 | Polymarket | ❌ | classifica OVERALL/MONTH/PNL: 410 Client Error: Gone for url: https://data-api.polymarket.com/v1/leaderboard?c |
@@ -20,12 +20,12 @@ Ultimo giro: **11/11/2026 02:28** ora italiana (16.5 minuti).
 | Polymarket | ❌ | classifica TECH/MONTH/PNL: 410 Client Error: Gone for url: https://data-api.polymarket.com/v1/leaderboard?c |
 | Polymarket | ❌ | classifica CULTURE/MONTH/PNL: 410 Client Error: Gone for url: https://data-api.polymarket.com/v1/leaderboard?c |
 | Polymarket | ❌ | nessuna classifica letta |
-| Hyperliquid | ✅ | classifica: 48054 conti, salvati 17848 rilevanti, 870 KB |
-| Hyperliquid | ✅ | vault: 9478 (6421 chiusi), salvati 1642, 128 KB |
-| Hyperliquid | ✅ | pannello: 199 wallet, 2609 posizioni aperte, 29362 fill, 33 ad alta frequenza esclusi, 0 errori, 88 KB + 775 KB |
+| Hyperliquid | ✅ | classifica: 48159 conti, salvati 17761 rilevanti, 875 KB |
+| Hyperliquid | ✅ | vault: 9478 (6422 chiusi), salvati 1638, 127 KB |
+| Hyperliquid | ✅ | pannello: 198 wallet, 2577 posizioni aperte, 25440 fill, 36 ad alta frequenza esclusi, 0 errori, 87 KB + 659 KB |
 
-Archivio: **68,1 MB** in totale.
+Archivio: **69,9 MB** in totale.
 
-Giorni registrati: **33**, dal 2026-10-09 al 2026-11-10.
+Giorni registrati: **34**, dal 2026-10-09 al 2026-11-11.
 
 Calendario delle analisi e regole: vedi [README.md](README.md).
