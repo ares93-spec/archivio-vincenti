@@ -1,11 +1,11 @@
 # Stato dell'archivio
 
-Ultimo giro: **17/11/2026 06:13** ora italiana (17.2 minuti).
+Ultimo giro: **18/11/2026 04:08** ora italiana (17.6 minuti).
 
 | Fonte | Esito | Dettaglio |
 |---|---|---|
-| ApeWisdom | ✅ | 1477 righe (804 titoli in all-stocks), 28 KB |
-| Cboe | ✅ | scelti oggi 41 (picco 17, folla 25, controllo 15); seguiti 259; letti 234, senza catena 25; 20 KB + 71 KB |
+| ApeWisdom | ✅ | 1669 righe (905 titoli in all-stocks), 32 KB |
+| Cboe | ✅ | scelti oggi 40 (picco 4, folla 25, controllo 15); seguiti 260; letti 234, senza catena 26; 20 KB + 72 KB |
 | Polymarket | ❌ | classifica OVERALL/DAY/PNL: 410 Client Error: Gone for url: https://data-api.polymarket.com/v1/leaderboard?c |
 | Polymarket | ❌ | classifica OVERALL/WEEK/PNL: 410 Client Error: Gone for url: https://data-api.polymarket.com/v1/leaderboard?c |
 | Polymarket | ❌ | classifica OVERALL/MONTH/PNL: 410 Client Error: Gone for url: https://data-api.polymarket.com/v1/leaderboard?c |
@@ -20,11 +20,11 @@ Ultimo giro: **17/11/2026 06:13** ora italiana (17.2 minuti).
 | Polymarket | ❌ | classifica TECH/MONTH/PNL: 410 Client Error: Gone for url: https://data-api.polymarket.com/v1/leaderboard?c |
 | Polymarket | ❌ | classifica CULTURE/MONTH/PNL: 410 Client Error: Gone for url: https://data-api.polymarket.com/v1/leaderboard?c |
 | Polymarket | ❌ | nessuna classifica letta |
-| Hyperliquid | ✅ | classifica: 47952 conti, salvati 17177 rilevanti, 851 KB |
-| Hyperliquid | ✅ | vault: 9478 (6428 chiusi), salvati 1610, 125 KB |
-| Hyperliquid | ✅ | pannello: 197 wallet, 2379 posizioni aperte, 26036 fill, 36 ad alta frequenza esclusi, 0 errori, 80 KB + 675 KB |
+| Hyperliquid | ✅ | classifica: 48157 conti, salvati 17339 rilevanti, 842 KB |
+| Hyperliquid | ✅ | vault: 9478 (6428 chiusi), salvati 1607, 124 KB |
+| Hyperliquid | ✅ | pannello: 196 wallet, 2167 posizioni aperte, 27909 fill, 32 ad alta frequenza esclusi, 0 errori, 73 KB + 731 KB |
 
-Archivio: **80,9 MB** in totale.
+Archivio: **81,0 MB** in totale.
 
 Giorni registrati: **40**, dal 2026-10-09 al 2026-11-17.
 
