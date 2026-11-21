@@ -73,7 +73,7 @@
    "picco"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-11-19"
+  "ultimo": "2026-11-20"
  },
  "AIXI": {
   "gruppi": [
@@ -81,6 +81,13 @@
   ],
   "primo": "2026-10-23",
   "ultimo": "2026-10-23"
+ },
+ "AKAN": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-11-20",
+  "ultimo": "2026-11-20"
  },
  "AMAT": {
   "gruppi": [
@@ -482,7 +489,7 @@
    "controllo"
   ],
   "primo": "2026-10-19",
-  "ultimo": "2026-11-05"
+  "ultimo": "2026-11-20"
  },
  "CVS": {
   "gruppi": [
@@ -577,7 +584,7 @@
    "controllo"
   ],
   "primo": "2026-10-30",
-  "ultimo": "2026-10-30"
+  "ultimo": "2026-11-20"
  },
  "DOW": {
   "gruppi": [
@@ -751,7 +758,7 @@
    "controllo"
   ],
   "primo": "2026-11-17",
-  "ultimo": "2026-11-19"
+  "ultimo": "2026-11-20"
  },
  "GOLD": {
   "gruppi": [
@@ -805,6 +812,13 @@
   ],
   "primo": "2026-10-16",
   "ultimo": "2026-10-16"
+ },
+ "HERE": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-11-20",
+  "ultimo": "2026-11-20"
  },
  "HIMS": {
   "gruppi": [
@@ -1088,10 +1102,11 @@
  "MAGA": {
   "gruppi": [
    "controllo",
-   "folla"
+   "folla",
+   "picco"
   ],
   "primo": "2026-10-13",
-  "ultimo": "2026-11-18"
+  "ultimo": "2026-11-20"
  },
  "MARA": {
   "gruppi": [
@@ -1120,7 +1135,7 @@
    "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-11-16"
+  "ultimo": "2026-11-20"
  },
  "MDA": {
   "gruppi": [
@@ -1135,7 +1150,7 @@
    "controllo"
   ],
   "primo": "2026-10-26",
-  "ultimo": "2026-11-10"
+  "ultimo": "2026-11-20"
  },
  "META": {
   "gruppi": [
@@ -1347,7 +1362,7 @@
    "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-11-17"
+  "ultimo": "2026-11-20"
  },
  "OUT": {
   "gruppi": [
@@ -1421,7 +1436,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-11-17"
+  "ultimo": "2026-11-20"
  },
  "PRME": {
   "gruppi": [
@@ -1555,7 +1570,7 @@
    "folla"
   ],
   "primo": "2026-10-14",
-  "ultimo": "2026-11-17"
+  "ultimo": "2026-11-20"
  },
  "SAP": {
   "gruppi": [
@@ -2010,7 +2025,7 @@
    "controllo"
   ],
   "primo": "2026-11-17",
-  "ultimo": "2026-11-17"
+  "ultimo": "2026-11-20"
  },
  "XLAB": {
   "gruppi": [
@@ -2052,7 +2067,7 @@
    "controllo"
   ],
   "primo": "2026-11-12",
-  "ultimo": "2026-11-12"
+  "ultimo": "2026-11-20"
  },
  "XXII": {
   "gruppi": [
