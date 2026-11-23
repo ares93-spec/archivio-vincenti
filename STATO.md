@@ -1,10 +1,10 @@
 # Stato dell'archivio
 
-Ultimo giro: **22/11/2026 02:34** ora italiana (9.6 minuti).
+Ultimo giro: **23/11/2026 02:58** ora italiana (10.0 minuti).
 
 | Fonte | Esito | Dettaglio |
 |---|---|---|
-| ApeWisdom | ✅ | 1915 righe (1066 titoli in all-stocks), 36 KB |
+| ApeWisdom | ✅ | 1724 righe (956 titoli in all-stocks), 32 KB |
 | Cboe | ✅ | saltata: oggi la borsa americana è chiusa |
 | Polymarket | ❌ | classifica OVERALL/DAY/PNL: 410 Client Error: Gone for url: https://data-api.polymarket.com/v1/leaderboard?c |
 | Polymarket | ❌ | classifica OVERALL/WEEK/PNL: 410 Client Error: Gone for url: https://data-api.polymarket.com/v1/leaderboard?c |
@@ -20,12 +20,12 @@ Ultimo giro: **22/11/2026 02:34** ora italiana (9.6 minuti).
 | Polymarket | ❌ | classifica TECH/MONTH/PNL: 410 Client Error: Gone for url: https://data-api.polymarket.com/v1/leaderboard?c |
 | Polymarket | ❌ | classifica CULTURE/MONTH/PNL: 410 Client Error: Gone for url: https://data-api.polymarket.com/v1/leaderboard?c |
 | Polymarket | ❌ | nessuna classifica letta |
-| Hyperliquid | ✅ | classifica: 46465 conti, salvati 15447 rilevanti, 777 KB |
-| Hyperliquid | ✅ | vault: 9478 (6435 chiusi), salvati 1587, 123 KB |
-| Hyperliquid | ✅ | pannello: 193 wallet, 2081 posizioni aperte, 19308 fill, 27 ad alta frequenza esclusi, 0 errori, 70 KB + 516 KB |
+| Hyperliquid | ✅ | classifica: 46616 conti, salvati 15533 rilevanti, 785 KB |
+| Hyperliquid | ✅ | vault: 9478 (6438 chiusi), salvati 1585, 122 KB |
+| Hyperliquid | ✅ | pannello: 193 wallet, 2106 posizioni aperte, 23412 fill, 21 ad alta frequenza esclusi, 0 errori, 71 KB + 597 KB |
 
-Archivio: **84,4 MB** in totale.
+Archivio: **85,9 MB** in totale.
 
-Giorni registrati: **44**, dal 2026-10-09 al 2026-11-21.
+Giorni registrati: **45**, dal 2026-10-09 al 2026-11-22.
 
 Calendario delle analisi e regole: vedi [README.md](README.md).
