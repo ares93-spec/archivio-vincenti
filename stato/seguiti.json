@@ -82,6 +82,13 @@
   "primo": "2026-10-23",
   "ultimo": "2026-10-23"
  },
+ "AKA": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-11-24",
+  "ultimo": "2026-11-24"
+ },
  "AKAN": {
   "gruppi": [
    "controllo"
@@ -236,12 +243,26 @@
   "primo": "2026-11-13",
   "ultimo": "2026-11-20"
  },
+ "BBW": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-11-24",
+  "ultimo": "2026-11-24"
+ },
  "BEAT": {
   "gruppi": [
    "controllo"
   ],
   "primo": "2026-11-02",
   "ultimo": "2026-11-02"
+ },
+ "BIS": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-11-24",
+  "ultimo": "2026-11-24"
  },
  "BJ": {
   "gruppi": [
@@ -536,7 +557,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-22",
-  "ultimo": "2026-11-17"
+  "ultimo": "2026-11-24"
  },
  "DECK": {
   "gruppi": [
@@ -598,6 +619,13 @@
   ],
   "primo": "2026-10-15",
   "ultimo": "2026-11-19"
+ },
+ "DT": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-11-24",
+  "ultimo": "2026-11-24"
  },
  "DUOL": {
   "gruppi": [
@@ -753,7 +781,7 @@
    "controllo"
   ],
   "primo": "2026-10-27",
-  "ultimo": "2026-11-19"
+  "ultimo": "2026-11-24"
  },
  "GME": {
   "gruppi": [
@@ -1106,7 +1134,7 @@
    "controllo"
   ],
   "primo": "2026-10-15",
-  "ultimo": "2026-11-13"
+  "ultimo": "2026-11-24"
  },
  "LRCX": {
   "gruppi": [
@@ -1262,7 +1290,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-13",
-  "ultimo": "2026-11-18"
+  "ultimo": "2026-11-24"
  },
  "MU": {
   "gruppi": [
@@ -1414,6 +1442,13 @@
   "primo": "2026-11-05",
   "ultimo": "2026-11-11"
  },
+ "PAC": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-11-24",
+  "ultimo": "2026-11-24"
+ },
  "PANW": {
   "gruppi": [
    "picco+folla"
@@ -1530,7 +1565,7 @@
    "controllo"
   ],
   "primo": "2026-10-16",
-  "ultimo": "2026-10-20"
+  "ultimo": "2026-11-24"
  },
  "RIVN": {
   "gruppi": [
@@ -1615,6 +1650,13 @@
   "primo": "2026-10-14",
   "ultimo": "2026-11-20"
  },
+ "SA": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-11-24",
+  "ultimo": "2026-11-24"
+ },
  "SAP": {
   "gruppi": [
    "controllo",
@@ -1631,6 +1673,13 @@
   ],
   "primo": "2026-10-09",
   "ultimo": "2026-11-20"
+ },
+ "SCHG": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-11-24",
+  "ultimo": "2026-11-24"
  },
  "SDY": {
   "gruppi": [
@@ -1705,7 +1754,7 @@
    "folla"
   ],
   "primo": "2026-10-14",
-  "ultimo": "2026-11-12"
+  "ultimo": "2026-11-24"
  },
  "SMH": {
   "gruppi": [
@@ -1770,7 +1819,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-11-20"
+  "ultimo": "2026-11-24"
  },
  "SPMO": {
   "gruppi": [
@@ -1884,7 +1933,7 @@
    "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-11-17"
+  "ultimo": "2026-11-24"
  },
  "UNH": {
   "gruppi": [
@@ -2007,7 +2056,7 @@
    "controllo"
   ],
   "primo": "2026-11-20",
-  "ultimo": "2026-11-20"
+  "ultimo": "2026-11-24"
  },
  "WAVE": {
   "gruppi": [
