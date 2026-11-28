@@ -385,7 +385,7 @@
    "controllo"
   ],
   "primo": "2026-10-14",
-  "ultimo": "2026-11-24"
+  "ultimo": "2026-11-27"
  },
  "CD": {
   "gruppi": [
@@ -758,7 +758,7 @@
    "controllo"
   ],
   "primo": "2026-11-13",
-  "ultimo": "2026-11-13"
+  "ultimo": "2026-11-27"
  },
  "FSLR": {
   "gruppi": [
@@ -801,7 +801,7 @@
    "controllo"
   ],
   "primo": "2026-11-11",
-  "ultimo": "2026-11-13"
+  "ultimo": "2026-11-27"
  },
  "GM": {
   "gruppi": [
@@ -966,7 +966,7 @@
    "controllo"
   ],
   "primo": "2026-10-19",
-  "ultimo": "2026-11-24"
+  "ultimo": "2026-11-27"
  },
  "IBM": {
   "gruppi": [
@@ -1029,7 +1029,7 @@
    "picco"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-11-20"
+  "ultimo": "2026-11-27"
  },
  "IQ": {
   "gruppi": [
@@ -1046,7 +1046,7 @@
    "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-11-25"
+  "ultimo": "2026-11-27"
  },
  "IVVD": {
   "gruppi": [
@@ -1069,7 +1069,7 @@
    "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-11-16"
+  "ultimo": "2026-11-27"
  },
  "KLAC": {
   "gruppi": [
@@ -1243,7 +1243,7 @@
    "picco+folla"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-11-26"
+  "ultimo": "2026-11-27"
  },
  "MO": {
   "gruppi": [
@@ -1779,7 +1779,7 @@
    "controllo"
   ],
   "primo": "2026-10-23",
-  "ultimo": "2026-11-18"
+  "ultimo": "2026-11-27"
  },
  "SMCI": {
   "gruppi": [
@@ -1898,6 +1898,13 @@
   ],
   "primo": "2026-11-19",
   "ultimo": "2026-11-19"
+ },
+ "TER": {
+  "gruppi": [
+   "controllo"
+  ],
+  "primo": "2026-11-27",
+  "ultimo": "2026-11-27"
  },
  "TH": {
   "gruppi": [
@@ -2104,7 +2111,7 @@
    "controllo"
   ],
   "primo": "2026-10-09",
-  "ultimo": "2026-11-24"
+  "ultimo": "2026-11-27"
  },
  "WDC": {
   "gruppi": [
